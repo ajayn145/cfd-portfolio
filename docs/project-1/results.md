@@ -3,8 +3,9 @@
 ## Simulation Video
 
 <video controls width="600">
-  <source src="../assets/C.mp4" type="video/mp4">
+  <source src="/cfd-portfolio/assets/C.mp4" type="video/mp4">
 </video>
+
 
 ## Observations
 
