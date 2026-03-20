@@ -1,0 +1,14 @@
+site_name: CFD Portfolio - Ajay
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Project 1:
+      - Overview: project-1/overview.md
+      - Governing Equations: project-1/governing-equations.md
+      - Numerical Method: project-1/numerical-method.md
+      - Implementation: project-1/implementation.md
+      - Results: project-1/results.md
+      - Learnings: project-1/learnings.md
