@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#numerical-method" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -329,6 +334,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numerical Method
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -346,6 +371,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#governing-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discretization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discretization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advection-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection Scheme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stability-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stability Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -460,6 +570,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#governing-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discretization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discretization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advection-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection Scheme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stability-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stability Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -476,9 +662,37 @@
 
 
 
-  <h1>Numerical Method</h1>
-
-
+<h1 id="numerical-method">Numerical Method</h1>
+<h2 id="governing-equation">Governing Equation</h2>
+<p>∂C/∂t + ∇·(uC) = D∇²C − kC</p>
+<h2 id="discretization">Discretization</h2>
+<ul>
+<li>Spatial discretization: Finite-volume (Basilisk)</li>
+<li>Time integration: Explicit time stepping</li>
+</ul>
+<h2 id="advection-scheme">Advection Scheme</h2>
+<p>Initially, a centered advection scheme was used, which resulted in:</p>
+<ul>
+<li>Non-physical oscillations</li>
+<li>Stripe-like artifacts in the solution</li>
+</ul>
+<p>This behavior is due to numerical dispersion.</p>
+<p>The issue was resolved by switching to a more stable advection formulation using Basilisk’s advection module, which introduces numerical damping and ensures stability.</p>
+<h2 id="diffusion">Diffusion</h2>
+<p>Diffusion is solved using an implicit solver:</p>
+<ul>
+<li>Improves stability for small grid sizes</li>
+<li>Handles steep gradients effectively</li>
+</ul>
+<h2 id="reaction">Reaction</h2>
+<p>A first-order decay model is implemented:</p>
+<p>C_new = C / (1 + k·dt)</p>
+<h2 id="stability-considerations">Stability Considerations</h2>
+<ul>
+<li>Time step (DT) was reduced to maintain stability</li>
+<li>Grid resolution increased to improve accuracy</li>
+<li>Proper scaling of visualization ensured correct interpretation</li>
+</ul>
 
 
 

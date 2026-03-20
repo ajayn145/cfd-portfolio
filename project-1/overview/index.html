@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-1-reactive-scalar-transport" class="md-skip">
+        <a href="#project-1-reactive-scalar-transport-solver" class="md-skip">
           Skip to content
         </a>
       
@@ -332,10 +332,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#physics" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physics
+        Objective
       
     </span>
   </a>
@@ -343,10 +343,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#problem-description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objective
+        Problem Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
       
     </span>
   </a>
@@ -536,10 +558,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#physics" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physics
+        Objective
       
     </span>
   </a>
@@ -547,10 +569,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#problem-description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objective
+        Problem Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
       
     </span>
   </a>
@@ -574,16 +618,31 @@
 
 
 
-<h1 id="project-1-reactive-scalar-transport">Project 1: Reactive Scalar Transport</h1>
-<p>This project simulates the transport of a scalar (concentration) in a flow field with diffusion and reaction.</p>
-<h2 id="physics">Physics</h2>
-<ul>
-<li>Advection: transport due to flow</li>
-<li>Diffusion: spreading due to gradients</li>
-<li>Reaction: decay of scalar</li>
-</ul>
+<h1 id="project-1-reactive-scalar-transport-solver">Project 1: Reactive Scalar Transport Solver</h1>
 <h2 id="objective">Objective</h2>
-<p>To understand how numerical schemes affect stability and accuracy in CFD simulations.</p>
+<p>To develop a 2D CFD solver for scalar transport including advection, diffusion, and reaction using Basilisk.</p>
+<h2 id="problem-description">Problem Description</h2>
+<p>A scalar concentration field (C) is initialized as a Gaussian blob and transported in a uniform velocity field. The scalar undergoes:</p>
+<ul>
+<li>Advection (transport by flow)</li>
+<li>Diffusion (spreading due to gradients)</li>
+<li>Reaction (decay over time)</li>
+</ul>
+<h2 id="applications">Applications</h2>
+<p>This type of model is fundamental in:</p>
+<ul>
+<li>Pollutant transport in air and water</li>
+<li>Combustion (fuel species transport)</li>
+<li>Heat and mass transfer problems</li>
+<li>HVAC airflow and contaminant dispersion</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Finite-volume formulation (Basilisk)</li>
+<li>Transient simulation</li>
+<li>Reaction kinetics implementation</li>
+<li>Visualization using PPM → MP4 pipeline</li>
+</ul>
 
 
 
