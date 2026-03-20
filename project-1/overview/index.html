@@ -354,6 +354,105 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advection-transport-by-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection (Transport by Flow)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-2-diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram 2 — Diffusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffusion-spreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion (Spreading)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-3-reaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram 3 — Reaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction (Decay)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-4-combined-physics-very-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram 4 — Combined Physics (VERY IMPORTANT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combined-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combined Effect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-add-cfd-style-diagram-advanced-look" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Add CFD-Style Diagram (Advanced Look)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governing-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Physics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#applications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -580,6 +679,105 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advection-transport-by-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection (Transport by Flow)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-2-diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram 2 — Diffusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffusion-spreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion (Spreading)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-3-reaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram 3 — Reaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction (Decay)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-4-combined-physics-very-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram 4 — Combined Physics (VERY IMPORTANT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combined-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combined Effect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-add-cfd-style-diagram-advanced-look" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Add CFD-Style Diagram (Advanced Look)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governing-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governing Physics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#applications" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -625,9 +823,58 @@
 <p>A scalar concentration field (C) is initialized as a Gaussian blob and transported in a uniform velocity field. The scalar undergoes:</p>
 <ul>
 <li>Advection (transport by flow)</li>
+</ul>
+<h2 id="advection-transport-by-flow">Advection (Transport by Flow)</h2>
+<p>```mermaid
+flowchart LR
+    A[Blob at Left] --&gt; B[Moves Right]
+    B --&gt; C[Continues Moving]</p>
+<ul>
 <li>Diffusion (spreading due to gradients)</li>
+</ul>
+<hr />
+<h2 id="diagram-2-diffusion">Diagram 2 — Diffusion</h2>
+<p>```markdown</p>
+<h2 id="diffusion-spreading">Diffusion (Spreading)</h2>
+<p>```mermaid
+flowchart LR
+    A[Concentrated Blob] --&gt; B[Spreads Out]
+    B --&gt; C[More Uniform]</p>
+<ul>
 <li>Reaction (decay over time)</li>
 </ul>
+<hr />
+<h2 id="diagram-3-reaction">Diagram 3 — Reaction</h2>
+<p>```markdown</p>
+<h2 id="reaction-decay">Reaction (Decay)</h2>
+<p>```mermaid
+flowchart LR
+    A[High Concentration] --&gt; B[Reduced]
+    B --&gt; C[Almost Zero]</p>
+<hr />
+<h2 id="diagram-4-combined-physics-very-important">Diagram 4 — Combined Physics (VERY IMPORTANT)</h2>
+<p>```markdown</p>
+<h2 id="combined-effect">Combined Effect</h2>
+<p>```mermaid
+flowchart LR
+    A[Initial Blob]
+    A --&gt; B[Moves Right]
+    B --&gt; C[Spreads]
+    C --&gt; D[Decays]</p>
+<hr />
+<h2 id="step-3-add-cfd-style-diagram-advanced-look">Step 3 — Add CFD-Style Diagram (Advanced Look)</h2>
+<p>Add this (very powerful):</p>
+<p>```markdown</p>
+<h2 id="governing-physics">Governing Physics</h2>
+<p>```mermaid
+flowchart TD
+    A[Advection\n(u · ∇C)]
+    B[Diffusion\n(D ∇²C)]
+    C[Reaction\n(-kC)]</p>
+<pre><code>A --&gt; D[Final Solution]
+B --&gt; D
+C --&gt; D
+</code></pre>
 <h2 id="applications">Applications</h2>
 <p>This type of model is fundamental in:</p>
 <ul>
@@ -692,7 +939,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
