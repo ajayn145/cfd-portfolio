@@ -25,19 +25,19 @@ The scalar undergoes:
 ## Advection (Transport by Flow)
 
 ![Advection](../assets/diagrams/advection.png)
-
+The scalar is transported by the velocity field without changing its shape significantly.
 ---
 
 ## Diffusion (Spreading)
 
 ![Diffusion](../assets/diagrams/diffusion.png)
-
+The scalar spreads from regions of high concentration to low concentration, smoothing the distribution.
 ---
 
 ## Reaction (Decay)
 
 ![Reaction](../assets/diagrams/reaction.png)
-
+The scalar concentration decreases over time due to a decay process.
 ---
 
 ## Combined Effect
