@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../results/">
+        <link rel="prev" href="../implementation/">
       
+      
+        <link rel="next" href="../results/">
       
       
         
@@ -21,7 +23,7 @@
     
     
       
-        <title>Learnings - CFD Portfolio - Ajay</title>
+        <title>Tools & Stack - CFD Portfolio - Ajay</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#key-learnings" class="md-skip">
+        <a href="#tools-implementation-stack" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learnings
+              Tools & Stack
             
           </span>
         </div>
@@ -379,10 +381,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tools/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools & Stack
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -398,6 +427,288 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-solver-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Solver Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Solver Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basilisk-cfd-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basilisk (CFD Library)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programming Language
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numerical Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finite-volume-method-fvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finite Volume Method (FVM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-time-stepping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicit Time Stepping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multigrid-solver-diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multigrid Solver (Diffusion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basilisk-output-output_ppm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basilisk Output (output_ppm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-conversion-ppm2mp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Conversion (ppm2mp4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux / WSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcc-qcc-compiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCC / qcc Compiler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git &amp; GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-material-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MkDocs + Material Theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -435,37 +746,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learnings
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../learnings/" class="md-nav__link">
         
   
   
@@ -481,92 +765,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-numerical-schemes-matter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Numerical Schemes Matter
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-difference-between-physical-and-numerical-diffusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Difference Between Physical and Numerical Diffusion
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-importance-of-scaling-in-visualization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Importance of Scaling in Visualization
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-mesh-resolution-effects" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Mesh Resolution Effects
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-coupled-physics-understanding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Coupled Physics Understanding
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-debugging-cfd-simulations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Debugging CFD Simulations
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -606,10 +804,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-numerical-schemes-matter" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Numerical Schemes Matter
+        Overview
       
     </span>
   </a>
@@ -617,54 +815,250 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-difference-between-physical-and-numerical-diffusion" class="md-nav__link">
+  <a href="#core-solver-framework" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Difference Between Physical and Numerical Diffusion
+        Core Solver Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Solver Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basilisk-cfd-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basilisk (CFD Library)
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#3-importance-of-scaling-in-visualization" class="md-nav__link">
+  <a href="#programming-language" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Importance of Scaling in Visualization
+        Programming Language
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C Language
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4-mesh-resolution-effects" class="md-nav__link">
+  <a href="#numerical-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Mesh Resolution Effects
+        Numerical Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numerical Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finite-volume-method-fvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finite Volume Method (FVM)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-coupled-physics-understanding" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#explicit-time-stepping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Coupled Physics Understanding
+        Explicit Time Stepping
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-debugging-cfd-simulations" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#multigrid-solver-diffusion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Debugging CFD Simulations
+        Multigrid Solver (Diffusion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basilisk-output-output_ppm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basilisk Output (output_ppm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-conversion-ppm2mp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Conversion (ppm2mp4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux / WSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcc-qcc-compiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCC / qcc Compiler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git &amp; GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-material-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MkDocs + Material Theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
       
     </span>
   </a>
@@ -688,41 +1082,100 @@
 
 
 
-<h1 id="key-learnings">Key Learnings</h1>
-<h2 id="1-numerical-schemes-matter">1. Numerical Schemes Matter</h2>
-<p>Using a centered scheme for advection caused non-physical oscillations (stripes). This highlighted the importance of selecting stable numerical methods.</p>
-<h2 id="2-difference-between-physical-and-numerical-diffusion">2. Difference Between Physical and Numerical Diffusion</h2>
+<h1 id="tools-implementation-stack">Tools &amp; Implementation Stack</h1>
+<h2 id="overview">Overview</h2>
+<p>This project was developed using a combination of CFD frameworks, programming tools, and visualization utilities. Each tool was selected based on its role in solving the governing equations efficiently and transparently.</p>
+<hr />
+<h2 id="core-solver-framework">Core Solver Framework</h2>
+<h3 id="basilisk-cfd-library">Basilisk (CFD Library)</h3>
+<p><strong>Why it was used:</strong>
+- Easy for learning and implementing the libraries.
+- Provides built-in numerical solvers for:
+  - Advection
+  - Diffusion
+  - Multigrid methods
+- Allows direct implementation of governing equations
+- Offers fine control over numerical methods</p>
+<p><strong>Role in Project:</strong>
+- Solves the species transport equation
+- Handles grid generation and time-stepping
+- Provides efficient numerical operators</p>
+<hr />
+<h2 id="programming-language">Programming Language</h2>
+<h3 id="c-language">C Language</h3>
+<p><strong>Why it was used:</strong>
+- Required for working with Basilisk
+- Allows low-level control over numerical operations
+- High computational efficiency (important for CFD)</p>
+<p><strong>Role in Project:</strong>
+- Implements solver logic
+- Defines simulation events (initialization, advection, diffusion, reaction)
+- Controls simulation flow</p>
+<hr />
+<h2 id="numerical-methods">Numerical Methods</h2>
+<h3 id="finite-volume-method-fvm">Finite Volume Method (FVM)</h3>
+<p><strong>Why it was used:</strong>
+- Conserves physical quantities (mass, species)
+- Widely used in industrial CFD solvers</p>
+<p><strong>Role in Project:</strong>
+- Discretizes the governing equation over control volumes</p>
+<hr />
+<h3 id="explicit-time-stepping">Explicit Time Stepping</h3>
+<p><strong>Why it was used:</strong>
+- Simple to implement and understand
+- Suitable for transient simulations</p>
+<p><strong>Trade-off:</strong>
+- Requires small time step for stability</p>
+<hr />
+<h3 id="multigrid-solver-diffusion">Multigrid Solver (Diffusion)</h3>
+<p><strong>Why it was used:</strong>
+- Efficient for solving diffusion equations
+- Reduces computational cost compared to simple solvers</p>
+<hr />
+<h2 id="visualization">Visualization</h2>
+<h3 id="basilisk-output-output_ppm">Basilisk Output (<code>output_ppm</code>)</h3>
+<p><strong>Why it was used:</strong>
+- Built-in and easy to integrate with solver
+- Generates frame-by-frame visualization</p>
+<hr />
+<h3 id="video-conversion-ppm2mp4">Video Conversion (<code>ppm2mp4</code>)</h3>
+<p><strong>Why it was used:</strong>
+- Converts simulation frames into a continuous video
+- Helps visualize transient behavior clearly</p>
+<hr />
+<h2 id="development-environment">Development Environment</h2>
+<h3 id="linux-wsl">Linux / WSL</h3>
+<p><strong>Why it was used:</strong>
+- Basilisk is best supported in Linux environments
+- Provides stable compilation and execution setup</p>
+<hr />
+<h3 id="gcc-qcc-compiler">GCC / qcc Compiler</h3>
+<p><strong>Why it was used:</strong>
+- Required to compile Basilisk-based C programs
+- Optimized for numerical computations</p>
+<hr />
+<h2 id="version-control">Version Control</h2>
+<h3 id="git-github">Git &amp; GitHub</h3>
+<p><strong>Why it was used:</strong>
+- Tracks changes in code and documentation
+- Enables project versioning and sharing</p>
+<hr />
+<h2 id="documentation">Documentation</h2>
+<h3 id="mkdocs-material-theme">MkDocs + Material Theme</h3>
+<p><strong>Why it was used:</strong>
+- Converts project into structured documentation
+- Helps present work professionally
+- Easy deployment via GitHub Pages</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Each tool in this project was selected based on its ability to support:</p>
 <ul>
-<li>Physical diffusion: controlled by diffusivity (D)</li>
-<li>Numerical diffusion: introduced by discretization</li>
+<li>Accurate numerical simulation</li>
+<li>Efficient computation</li>
+<li>Clear visualization</li>
+<li>Professional documentation</li>
 </ul>
-<p>Understanding this distinction was critical to interpreting results.</p>
-<h2 id="3-importance-of-scaling-in-visualization">3. Importance of Scaling in Visualization</h2>
-<p>Incorrect scaling initially made the blob invisible. Proper min/max values are essential for meaningful visualization.</p>
-<h2 id="4-mesh-resolution-effects">4. Mesh Resolution Effects</h2>
-<p>Increasing grid resolution (128 → 512):</p>
-<ul>
-<li>Improved solution accuracy</li>
-<li>Reduced numerical errors</li>
-<li>Better captured gradients</li>
-</ul>
-<h2 id="5-coupled-physics-understanding">5. Coupled Physics Understanding</h2>
-<p>This project demonstrated how:</p>
-<ul>
-<li>Advection transports the scalar</li>
-<li>Diffusion spreads it</li>
-<li>Reaction reduces it</li>
-</ul>
-<p>All three processes interact simultaneously.</p>
-<h2 id="6-debugging-cfd-simulations">6. Debugging CFD Simulations</h2>
-<p>Several issues were encountered and resolved:</p>
-<ul>
-<li>Compilation errors due to missing includes</li>
-<li>Instability due to large time steps</li>
-<li>Incorrect field definitions (uf, Df)</li>
-<li>Visualization issues</li>
-</ul>
-<p>This significantly improved debugging and solver-level understanding.</p>
+<p>Together, they form a complete workflow similar to real-world CFD development pipelines.</p>
 
 
 
