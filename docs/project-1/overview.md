@@ -22,7 +22,7 @@ The scalar undergoes:
 
 ---
 
-## Beginner-Friendly Explanation
+## In A NUTSHELL:--
 
 Imagine you drop a drop of ink into flowing water.
 
@@ -36,7 +36,7 @@ This project simulates exactly this process using mathematics and numerical meth
 
 ---
 
-### What is a Scalar?
+### What is the Scalar here?
 
 A scalar is simply a quantity that has a value at every point in space.
 
@@ -47,7 +47,7 @@ In this project:
 
 ---
 
-### What is a Computational Domain?
+### What is the Computational Domain here?
 
 We simulate the problem inside a square region:
 
@@ -56,7 +56,7 @@ We simulate the problem inside a square region:
 
 ---
 
-### What is a Gaussian Blob?
+### What is the Gaussian Blob here?
 
 The initial condition is a "blob" of concentration.
 
@@ -103,6 +103,8 @@ This type of simulation is used in:
 - The computer calculates this step by step
 
 ---
+
+## Technically,
 
 ## Advection (Transport by Flow)
 
