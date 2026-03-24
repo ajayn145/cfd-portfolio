@@ -4,6 +4,8 @@
 
 To develop a 2D finite-volume CFD solver for scalar transport including advection, diffusion, and reaction using Basilisk.
 
+This project implements a simplified **species transport solver**, commonly used in CFD to simulate transport and reaction of scalar quantities.
+
 ---
 
 ## Problem Description

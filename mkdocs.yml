@@ -10,6 +10,8 @@ nav:
       - Governing Equations: project-1/governing-equations.md
       - Numerical Method: project-1/numerical-method.md
       - Implementation: project-1/implementation.md
+      - Tools & Stack: project-1/tools.md
+      - Challenges & Debugging: project-1/challenges.md
       - Results: project-1/results.md
       - Learnings: project-1/learnings.md
 
@@ -19,3 +21,4 @@ markdown_extensions:
 plugins:
   - search
   - mermaid2
+  

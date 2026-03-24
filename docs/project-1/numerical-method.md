@@ -1,40 +1,90 @@
 # Numerical Method
 
-## Governing Equation
+## Overview
 
-∂C/∂t + ∇·(uC) = D∇²C − kC
+This section explains how the governing species transport equation is solved numerically.
 
-## Discretization
+The equation:
 
-- Spatial discretization: Finite-volume (Basilisk)
-- Time integration: Explicit time stepping
+`∂C/∂t + ∇·(uC) = D∇²C − kC`
 
-## Advection Scheme
+is solved using a finite-volume approach with time-stepping.
 
-Initially, a centered advection scheme was used, which resulted in:
+---
 
+## Discretization Approach
+
+### Finite Volume Method (FVM)
+
+The computational domain is divided into small control volumes (cells).
+
+**Why this method?**
+- Ensures conservation of mass and species
+- Widely used in industrial CFD solvers
+
+**Concept:**
+Each cell stores an average value of concentration (C), and fluxes across cell faces determine how C changes.
+
+---
+
+## Time Integration
+
+### Explicit Time Stepping
+
+The solution is advanced in time using small time steps (Δt).
+
+**Why used here?**
+- Simple to implement
+- Easy to understand for transient problems
+
+**Limitation:**
+- Requires small time step for stability
+
+---
+
+## Advection Term
+
+### Equation Term:
+`∇·(uC)`
+
+### Numerical Treatment:
+
+- Solved using Basilisk’s built-in `advection()` function
+- Uses a stable flux-based scheme
+
+**Why this is important:**
+Initially, a naive or centered approach caused:
 - Non-physical oscillations
-- Stripe-like artifacts in the solution
+- Stripe-like artifacts
 
-This behavior is due to numerical dispersion.
+Switching to a proper advection scheme:
+- Eliminated oscillations
+- Ensured stable transport
 
-The issue was resolved by switching to a more stable advection formulation using Basilisk’s advection module, which introduces numerical damping and ensures stability.
+---
 
-## Diffusion
+## Diffusion Term
 
-Diffusion is solved using an implicit solver:
+### Equation Term:
+`D∇²C`
 
-- Improves stability for small grid sizes
-- Handles steep gradients effectively
+### Numerical Treatment:
 
-## Reaction
+- Solved using Basilisk’s `diffusion()` function
+- Uses an implicit multigrid solver
 
-A first-order decay model is implemented:
+**Why implicit?**
+- Stable even for larger time steps
+- Efficient for solving diffusion equations
 
+---
+
+## Reaction Term
+
+### Equation Term:
+`−kC`
+
+### Numerical Treatment:
+
+```text
 C_new = C / (1 + k·dt)
-
-## Stability Considerations
-
-- Time step (DT) was reduced to maintain stability
-- Grid resolution increased to improve accuracy
-- Proper scaling of visualization ensured correct interpretation
