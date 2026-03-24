@@ -354,6 +354,89 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beginner-friendly-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beginner-Friendly Explanation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beginner-Friendly Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-scalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Scalar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-computational-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Computational Domain?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gaussian-blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Gaussian Blob?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-solver-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Does the Solver Do?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why is This Important?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#advection-transport-by-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -613,6 +696,89 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beginner-friendly-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beginner-Friendly Explanation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beginner-Friendly Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-scalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Scalar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-computational-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Computational Domain?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gaussian-blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Gaussian Blob?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-solver-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Does the Solver Do?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why is This Important?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#advection-transport-by-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -697,6 +863,67 @@
 <li>Advection (transport by flow)</li>
 <li>Diffusion (spreading due to gradients)</li>
 <li>Reaction (decay over time)</li>
+</ul>
+<hr />
+<h2 id="beginner-friendly-explanation">Beginner-Friendly Explanation</h2>
+<p>Imagine you drop a drop of ink into flowing water.</p>
+<p>Three things will happen:</p>
+<ol>
+<li>The ink will <strong>move with the water</strong> → this is <em>Advection</em></li>
+<li>The ink will <strong>spread out and mix</strong> → this is <em>Diffusion</em></li>
+<li>The ink will <strong>fade or disappear over time</strong> → this is <em>Reaction</em></li>
+</ol>
+<p>This project simulates exactly this process using mathematics and numerical methods.</p>
+<hr />
+<h3 id="what-is-a-scalar">What is a Scalar?</h3>
+<p>A scalar is simply a quantity that has a value at every point in space.</p>
+<p>In this project:</p>
+<ul>
+<li>C represents concentration (like ink density)</li>
+<li>Each point in the domain has a value of C</li>
+</ul>
+<hr />
+<h3 id="what-is-a-computational-domain">What is a Computational Domain?</h3>
+<p>We simulate the problem inside a square region:</p>
+<ul>
+<li>This is divided into many small cells (grid)</li>
+<li>Each cell stores a value of concentration</li>
+</ul>
+<hr />
+<h3 id="what-is-a-gaussian-blob">What is a Gaussian Blob?</h3>
+<p>The initial condition is a "blob" of concentration.</p>
+<p>Mathematically:</p>
+<p><code>C = exp(-100r²)</code></p>
+<p>This creates:</p>
+<ul>
+<li>High concentration at center</li>
+<li>Smooth decrease outward</li>
+</ul>
+<p>👉 This gives a nice visible shape to track</p>
+<hr />
+<h3 id="what-does-the-solver-do">What Does the Solver Do?</h3>
+<p>At every time step:</p>
+<ol>
+<li>Moves the scalar → Advection</li>
+<li>Spreads it → Diffusion</li>
+<li>Reduces it → Reaction</li>
+</ol>
+<p>This process repeats until the final time.</p>
+<hr />
+<h3 id="why-is-this-important">Why is This Important?</h3>
+<p>This type of simulation is used in:</p>
+<ul>
+<li>Pollution spreading in air/water</li>
+<li>Heat transfer problems</li>
+<li>Combustion modeling</li>
+<li>HVAC airflow analysis</li>
+</ul>
+<hr />
+<h3 id="simple-summary">Simple Summary</h3>
+<ul>
+<li>We start with a blob</li>
+<li>It moves, spreads, and fades</li>
+<li>The computer calculates this step by step</li>
 </ul>
 <hr />
 <h2 id="advection-transport-by-flow">Advection (Transport by Flow)</h2>
