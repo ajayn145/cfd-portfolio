@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../numerical-method/">
-      
-      
-        <link rel="next" href="../tools/">
       
       
         
@@ -23,7 +19,7 @@
     
     
       
-        <title>Implementation - CFD Portfolio - Ajay</title>
+        <title>Limitations - CFD Portfolio - Ajay</title>
       
     
     
@@ -64,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementation" class="md-skip">
+        <a href="#limitations" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementation
+              Limitations
             
           </span>
         </div>
@@ -220,20 +216,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -254,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -353,19 +347,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../implementation/" class="md-nav__link">
         
   
   
@@ -381,7 +366,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -534,6 +518,88 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-2-Ahmed_Body/ahmed-body/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -554,6 +620,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-simplifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Simplifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-simplifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Simplifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -569,16 +698,37 @@
 
 
 
-<h1 id="implementation">Implementation</h1>
-<p>The solver is implemented using Basilisk C.</p>
-<p>Key steps:</p>
+<h1 id="limitations">Limitations</h1>
+<h2 id="model-simplifications">Model Simplifications</h2>
 <ul>
-<li>Initialize scalar field (Gaussian blob)</li>
-<li>Define velocity field</li>
-<li>Solve advection using Basilisk's advection module</li>
-<li>Solve diffusion using diffusion operator</li>
-<li>Apply reaction term</li>
+<li>Single-species transport model</li>
+<li>No interaction between multiple species</li>
+<li>Reaction modeled as simple first-order decay</li>
 </ul>
+<hr />
+<h2 id="flow-assumptions">Flow Assumptions</h2>
+<ul>
+<li>Constant velocity field</li>
+<li>No coupling with Navier–Stokes equations</li>
+<li>No turbulence effects</li>
+</ul>
+<hr />
+<h2 id="numerical-limitations">Numerical Limitations</h2>
+<ul>
+<li>Explicit time stepping requires small time steps</li>
+<li>Grid resolution impacts accuracy</li>
+<li>No adaptive mesh refinement used in this setup</li>
+</ul>
+<hr />
+<h2 id="physical-simplifications">Physical Simplifications</h2>
+<ul>
+<li>No temperature coupling (no energy equation)</li>
+<li>Constant diffusion coefficient</li>
+<li>No real chemical kinetics</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>This project focuses on understanding the fundamentals of scalar transport. While simplified, it provides a strong foundation for more complex CFD simulations.</p>
 
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../challenges/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../learnings/">
+        <link rel="next" href="../governing-equations/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Results - CFD Portfolio - Ajay</title>
+        <title>Overview - CFD Portfolio - Ajay</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#results" class="md-skip">
+        <a href="#project-1-reactive-scalar-transport-solver" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Results
+              Overview
             
           </span>
         </div>
@@ -269,10 +269,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -288,6 +315,197 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-a-nutshell-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In A NUTSHELL:--
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In A NUTSHELL:--">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-scalar-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Scalar here?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-computational-domain-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Computational Domain here?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-gaussian-blob-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Gaussian Blob here?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-solver-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Does the Solver Do?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why is This Important?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technically,
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advection-transport-by-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advection (Transport by Flow)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diffusion-spreading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diffusion (Spreading)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction (Decay)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combined-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combined Effect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -437,37 +655,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Results
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
         
   
   
@@ -483,154 +674,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#simulation-video" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Simulation Video
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#result-analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Result Analysis
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Result Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#observed-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Observed Behavior
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#effect-of-physical-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Effect of Physical Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Effect of Physical Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diffusion-coefficient-d" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diffusion Coefficient (D)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reaction-rate-k" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reaction Rate (k)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#effect-of-numerical-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Effect of Numerical Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Effect of Numerical Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#grid-resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Grid Resolution
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#time-step-t" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Time Step (Δt)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -699,6 +742,88 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-2-Ahmed_Body/ahmed-body/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -726,10 +851,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simulation-video" class="md-nav__link">
+  <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simulation Video
+        Objective
       
     </span>
   </a>
@@ -737,22 +862,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#result-analysis" class="md-nav__link">
+  <a href="#problem-description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result Analysis
+        Problem Description
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Result Analysis">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-a-nutshell-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In A NUTSHELL:--
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In A NUTSHELL:--">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#observed-behavior" class="md-nav__link">
+  <a href="#what-is-the-scalar-here" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Observed Behavior
+        What is the Scalar here?
       
     </span>
   </a>
@@ -760,22 +896,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#effect-of-physical-parameters" class="md-nav__link">
+  <a href="#what-is-the-computational-domain-here" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Effect of Physical Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Effect of Physical Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diffusion-coefficient-d" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diffusion Coefficient (D)
+        What is the Computational Domain here?
       
     </span>
   </a>
@@ -783,10 +907,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reaction-rate-k" class="md-nav__link">
+  <a href="#what-is-the-gaussian-blob-here" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reaction Rate (k)
+        What is the Gaussian Blob here?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-solver-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Does the Solver Do?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why is This Important?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Summary
       
     </span>
   </a>
@@ -797,59 +954,70 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#effect-of-numerical-parameters" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#technically" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Effect of Numerical Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Effect of Numerical Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#grid-resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Grid Resolution
+        Technically,
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#time-step-t" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#advection-transport-by-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time Step (Δt)
+        Advection (Transport by Flow)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#diffusion-spreading" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validation
+        Diffusion (Spreading)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#reaction-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reaction (Decay)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combined-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combined Effect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
   
 </li>
       
@@ -870,53 +1038,101 @@
 
 
 
-<h1 id="results">Results</h1>
-<h2 id="simulation-video">Simulation Video</h2>
-<video controls width="600">
-  <source src="/cfd-portfolio/assets/C.mp4" type="video/mp4">
-</video>
-
-<h2 id="result-analysis">Result Analysis</h2>
-<p>The simulation captures the expected physical behavior of a reacting scalar transport problem.</p>
-<h3 id="observed-behavior">Observed Behavior</h3>
+<h1 id="project-1-reactive-scalar-transport-solver">Project 1: Reactive Scalar Transport Solver</h1>
+<h2 id="objective">Objective</h2>
+<p>To develop a 2D finite-volume CFD solver for scalar transport including advection, diffusion, and reaction using Basilisk.</p>
+<p>This project implements a simplified <strong>species transport solver</strong>, commonly used in CFD to simulate transport and reaction of scalar quantities.</p>
+<hr />
+<h2 id="problem-description">Problem Description</h2>
+<p>A scalar concentration field (C) is initialized as a Gaussian blob and transported in a uniform velocity field.</p>
+<p>The governing equation solved is:</p>
+<p><code>∂C/∂t + ∇·(uC) = D∇²C − kC</code></p>
+<p>The scalar undergoes:</p>
 <ul>
-<li>The scalar field moves in the direction of the velocity field (advection)</li>
-<li>The concentration spreads over time (diffusion)</li>
-<li>The magnitude of the scalar decreases gradually (reaction)</li>
+<li>Advection (transport by flow)</li>
+<li>Diffusion (spreading due to gradients)</li>
+<li>Reaction (decay over time)</li>
 </ul>
 <hr />
-<h3 id="effect-of-physical-parameters">Effect of Physical Parameters</h3>
-<h4 id="diffusion-coefficient-d">Diffusion Coefficient (D)</h4>
+<h2 id="in-a-nutshell-">In A NUTSHELL:--</h2>
+<p>Imagine you drop a drop of ink into flowing water.</p>
+<p>Three things will happen:</p>
+<ol>
+<li>The ink will <strong>move with the water</strong> → this is <em>Advection</em></li>
+<li>The ink will <strong>spread out and mix</strong> → this is <em>Diffusion</em></li>
+<li>The ink will <strong>fade or disappear over time</strong> → this is <em>Reaction</em></li>
+</ol>
+<p>This project simulates exactly this process using mathematics and numerical methods.</p>
+<hr />
+<h3 id="what-is-the-scalar-here">What is the Scalar here?</h3>
+<p>A scalar is simply a quantity that has a value at every point in space.</p>
+<p>In this project:</p>
 <ul>
-<li>Higher values → faster spreading</li>
-<li>Lower values → sharper concentration profile</li>
-</ul>
-<h4 id="reaction-rate-k">Reaction Rate (k)</h4>
-<ul>
-<li>Higher values → faster decay of scalar</li>
-<li>Lower values → longer persistence of the blob</li>
+<li>C represents concentration (like ink density)</li>
+<li>Each point in the domain has a value of C</li>
 </ul>
 <hr />
-<h3 id="effect-of-numerical-parameters">Effect of Numerical Parameters</h3>
-<h4 id="grid-resolution">Grid Resolution</h4>
+<h3 id="what-is-the-computational-domain-here">What is the Computational Domain here?</h3>
+<p>We simulate the problem inside a square region:</p>
 <ul>
-<li>Higher resolution (512) → better shape preservation</li>
-<li>Lower resolution → increased numerical diffusion</li>
-</ul>
-<h4 id="time-step-t">Time Step (Δt)</h4>
-<ul>
-<li>Smaller time step → stable and accurate solution</li>
-<li>Larger time step → potential instability</li>
+<li>This is divided into many small cells (grid)</li>
+<li>Each cell stores a value of concentration</li>
 </ul>
 <hr />
-<h3 id="validation">Validation</h3>
-<p>The results are consistent with theoretical expectations of the species transport equation:</p>
+<h3 id="what-is-the-gaussian-blob-here">What is the Gaussian Blob here?</h3>
+<p>The initial condition is a "blob" of concentration.</p>
+<p>Mathematically:</p>
+<p><code>C = exp(-100r²)</code></p>
+<p>This creates:</p>
 <ul>
-<li>Transport follows flow direction</li>
-<li>Diffusion smooths gradients</li>
-<li>Reaction reduces concentration</li>
+<li>High concentration at center</li>
+<li>Smooth decrease outward</li>
 </ul>
-<p>This confirms the correctness of the numerical implementation.</p>
+<p>👉 This gives a nice visible shape to track</p>
+<hr />
+<h3 id="what-does-the-solver-do">What Does the Solver Do?</h3>
+<p>At every time step:</p>
+<ol>
+<li>Moves the scalar → Advection</li>
+<li>Spreads it → Diffusion</li>
+<li>Reduces it → Reaction</li>
+</ol>
+<p>This process repeats until the final time.</p>
+<hr />
+<h3 id="why-is-this-important">Why is This Important?</h3>
+<p>This type of simulation is used in:</p>
+<ul>
+<li>Pollution spreading in air/water</li>
+<li>Heat transfer problems</li>
+<li>Combustion modeling</li>
+<li>HVAC airflow analysis</li>
+</ul>
+<hr />
+<h3 id="simple-summary">Simple Summary</h3>
+<ul>
+<li>We start with a blob</li>
+<li>It moves, spreads, and fades</li>
+<li>The computer calculates this step by step</li>
+</ul>
+<hr />
+<h2 id="technically">Technically,</h2>
+<h2 id="advection-transport-by-flow">Advection (Transport by Flow)</h2>
+<p><img alt="Advection" src="../../assets/diagrams/advection.png" />
+The scalar is transported by the velocity field without changing its shape significantly.</p>
+<hr />
+<h2 id="diffusion-spreading">Diffusion (Spreading)</h2>
+<p><img alt="Diffusion" src="../../assets/diagrams/diffusion.png" />
+The scalar spreads from regions of high concentration to low concentration, smoothing the distribution.</p>
+<hr />
+<h2 id="reaction-decay">Reaction (Decay)</h2>
+<p><img alt="Reaction" src="../../assets/diagrams/reaction.png" />
+The scalar concentration decreases over time due to a decay process.</p>
+<hr />
+<h2 id="combined-effect">Combined Effect</h2>
+<p><img alt="Combined" src="../../assets/diagrams/combined.png" /></p>
+<hr />
+<h2 id="key-insight">Key Insight</h2>
+<p>The scalar field evolution depends strongly on both physical parameters and the numerical scheme used, which affects stability and accuracy.</p>
 
 
 
