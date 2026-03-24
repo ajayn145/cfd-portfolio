@@ -12,7 +12,7 @@ A scalar concentration field (C) is initialized as a Gaussian blob and transport
 
 The governing equation solved is:
 
-∂C/∂t + ∇·(uC) = D∇²C − kC
+`∂C/∂t + ∇·(uC) = D∇²C − kC`
 
 The scalar undergoes:
 
@@ -22,10 +22,30 @@ The scalar undergoes:
 
 ---
 
-## Physical Interpretation
+## Advection (Transport by Flow)
 
-```mermaid
-flowchart LR
-    A[Initial Blob] --> B[Moves with Flow]
-    B --> C[Spreads]
-    C --> D[Decays]
+![Advection](../assets/diagrams/advection.png)
+
+---
+
+## Diffusion (Spreading)
+
+![Diffusion](../assets/diagrams/diffusion.png)
+
+---
+
+## Reaction (Decay)
+
+![Reaction](../assets/diagrams/reaction.png)
+
+---
+
+## Combined Effect
+
+![Combined](../assets/diagrams/combined.png)
+
+---
+
+## Key Insight
+
+The scalar field evolution depends strongly on both physical parameters and the numerical scheme used, which affects stability and accuracy.

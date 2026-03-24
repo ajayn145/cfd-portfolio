@@ -2,8 +2,6 @@ site_name: CFD Portfolio - Ajay
 
 theme:
   name: material
-  features:
-    - content.code.copy
 
 nav:
   - Home: index.md
@@ -14,8 +12,10 @@ nav:
       - Implementation: project-1/implementation.md
       - Results: project-1/results.md
       - Learnings: project-1/learnings.md
-      
+
 markdown_extensions:
   - pymdownx.superfences
-  - pymdownx.details
-  - pymdownx.tabbed
+
+plugins:
+  - search
+  - mermaid2
