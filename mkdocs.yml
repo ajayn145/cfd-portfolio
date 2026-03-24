@@ -14,6 +14,7 @@ nav:
       - Challenges & Debugging: project-1/challenges.md
       - Results: project-1/results.md
       - Learnings: project-1/learnings.md
+      - Future Work: project-1/future-work.md
 
 markdown_extensions:
   - pymdownx.superfences
