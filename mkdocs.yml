@@ -6,15 +6,17 @@ theme:
 nav:
   - Home: index.md
   - Project 1:
-      - Overview: project-1/overview.md
-      - Governing Equations: project-1/governing-equations.md
-      - Numerical Method: project-1/numerical-method.md
-      - Implementation: project-1/implementation.md
-      - Tools & Stack: project-1/tools.md
-      - Challenges & Debugging: project-1/challenges.md
-      - Results: project-1/results.md
-      - Learnings: project-1/learnings.md
-      - Future Work: project-1/future_work.md
+      - Overview: project-1-Species_transport_solver/overview.md
+      - Governing Equations: project-1-Species_transport_solver/governing-equations.md
+      - Numerical Method: project-1-Species_transport_solver/numerical-method.md
+      - Implementation: project-1-Species_transport_solver/implementation.md
+      - Tools & Stack: project-1-Species_transport_solver/tools.md
+      - Challenges & Debugging: project-1-Species_transport_solver/challenges.md
+      - Results: project-1-Species_transport_solver/results.md
+      - Learnings: project-1-Species_transport_solver/learnings.md
+      - Future Work: project-1-Species_transport_solver/future_work.md
+  - Project 2:
+      - Overview: project-2-Ahmed_Body/ahmed-body.md
 
 markdown_extensions:
   - pymdownx.superfences
