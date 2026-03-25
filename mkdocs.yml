@@ -15,13 +15,27 @@ nav:
       - Results: project-1-Species_transport_solver/results.md
       - Learnings: project-1-Species_transport_solver/learnings.md
       - Future Work: project-1-Species_transport_solver/future_work.md
-  - Project 2:
-      - Overview: project-2-Ahmed_Body/ahmed-body.md
+  - Project 2: 
+    - Ahmed Body:
+      - Overview: project-2/overview.md
+      - Governing Equations: project-2/governing-equations.md
+      - Numerical Method: project-2/numerical-method.md
+      - Implementation: project-2/implementation.md
+      - Tools & Stack: project-2/tools.md
+      - Challenges & Debugging: project-2/challenges.md
+      - Results: project-2/results.md
+      - Learnings: project-2/learnings.md
+      - Future Work: project-2/future_work.md
 
 markdown_extensions:
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: false
+
 
 plugins:
   - search
   - mermaid2
-  
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
