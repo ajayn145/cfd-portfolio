@@ -1,38 +1,97 @@
-# CFD Portfolio – Ajay
+# CFD Engineer | Multiphysics Simulation | Basilisk & Python
 
-Welcome to my CFD project portfolio focused on:
+## About Me
 
-- OpenFOAM simulations
-- Thermal and fluid engineering
-- Python-based post-processing
-- Engineering validation studies
+I am an engineering professional focused on Computational Fluid Dynamics (CFD), with hands-on experience in building and analyzing simulations involving fluid flow, heat transfer, and reactive systems.
 
----
+My work focuses on understanding physical behavior through numerical modeling, especially in coupled multi-physics problems.
 
-## 🔬 Projects
+--------------------------------------------------
 
-### 🟢 Thermal Fundamentals
-- A1 – Heat Conduction
-- A2 – Thermal Diffusion
-- A3 – Forced Convection
+## Core Skills
 
-### 🔵 CFD Applications
-- Ahmed Body Aerodynamics
-- Heat Sink Cooling
-- HVAC Flow Simulation
+- CFD Simulation (**Basilisk**-learning, **OpenFOAM**-learning)
+- Fluid Mechanics and Heat Transfer
+- Multiphysics Modeling (Reaction + Flow + Heat)
+- Numerical Methods (Finite Volume Method)
+- **Python**-learning (NumPy, Matplotlib for post-processing)
+- **C Programming**-learning (solver implementation)
 
----
+--------------------------------------------------
 
-## 🧠 Skills Demonstrated
+## Featured Projects
 
-- Turbulence modeling
-- Conjugate heat transfer
-- Mesh independence studies
-- Python automation
-- Engineering validation
+### Project 1: Species Transport Solver
+
+- Implemented scalar transport using diffusion and advection
+- Studied spreading and transport behavior of species
+- Built foundation for multi-physics simulations
 
 ---
 
-## 📫 Contact
+### Project 2: Reactive Buoyancy Flow Simulation
 
-(Add your LinkedIn / email later)
+- Developed a coupled CFD solver using Basilisk (C)
+- Modeled interaction between:
+  - Species transport
+  - Heat generation (reaction)
+  - Buoyancy-driven fluid flow
+- Observed plume formation and thermal runaway behavior
+- Performed parametric study on thermal diffusivity (kappa)
+- Analyzed system using Rayleigh number scaling
+
+--------------------------------------------------
+
+## Key Highlights
+
+- Simulated thermal runaway in reactive systems
+- Demonstrated buoyancy-driven plume formation
+- Built complete CFD workflow:
+  - Solver → Simulation → Post-processing → Visualization
+- Generated plots and flow animations for analysis
+
+--------------------------------------------------
+
+## Engineering Applications
+
+The work presented here is relevant to:
+
+- Combustion systems
+- Battery thermal runaway analysis
+- Fire and smoke plume modeling
+- Natural convection problems
+- Heat transfer systems
+
+--------------------------------------------------
+
+## What I Can Do
+
+- Develop CFD solvers using Basilisk
+- Analyze multi-physics systems
+- Perform parametric and sensitivity studies
+- Interpret simulation results physically
+- Create clear visualizations and reports
+
+--------------------------------------------------
+
+## Currently Learning
+
+- **OpenFOAM** (for industry-level CFD workflows)
+- doing personal projects using **Basilisk (C)**
+- Advanced turbulence modeling
+- Reduced Order Modeling (ROM)
+- Application of CFD in EV thermal management
+
+--------------------------------------------------
+
+## Contact
+
+Email: ajayn145@gmail.com  
+GitHub: https://github.com/ajayn145  
+Portfolio website - https://ajayn145.github.io/cfd-portfolio/
+
+--------------------------------------------------
+
+## One-Line Summary
+
+I build and analyze CFD simulations to understand how fluid flow, heat transfer, and reactions interact in real-world engineering systems.

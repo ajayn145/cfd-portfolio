@@ -16,6 +16,7 @@ nav:
       - Learnings: project-1-Species_transport_solver/learnings.md
       - Future Work: project-1-Species_transport_solver/future_work.md
   - Project 2:
+      - Summary: project-2-Species_transport_temperature_and_buouancy_solver/summary.md
       - Overview: project-2-Species_transport_temperature_and_buouancy_solver/overview.md
       - Vector Calculus: project-2-Species_transport_temperature_and_buouancy_solver/vector-calculus-basics.md
       - Governing Equations: project-2-Species_transport_temperature_and_buouancy_solver/governing-equations.md
