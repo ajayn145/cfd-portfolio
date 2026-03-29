@@ -15,6 +15,17 @@ nav:
       - Results: project-1-Species_transport_solver/results.md
       - Learnings: project-1-Species_transport_solver/learnings.md
       - Future Work: project-1-Species_transport_solver/future_work.md
+  - Project 2:
+      - Overview: project-2-Species_transport_temperature_and_buouancy_solver/overview.md
+      - Vector Calculus: project-2-Species_transport_temperature_and_buouancy_solver/vector-calculus-basics.md
+      - Governing Equations: project-2-Species_transport_temperature_and_buouancy_solver/governing-equations.md
+      - Numerical Method: project-2-Species_transport_temperature_and_buouancy_solver/numerical-method.md
+      - Implementation: project-2-Species_transport_temperature_and_buouancy_solver/implementation.md
+      - Tools & Stack: project-2-Species_transport_temperature_and_buouancy_solver/tools.md
+      - Challenges & Debugging: project-2-Species_transport_temperature_and_buouancy_solver/challenges.md
+      - Results: project-2-Species_transport_temperature_and_buouancy_solver/results.md
+      - Learnings: project-2-Species_transport_temperature_and_buouancy_solver/learnings.md
+      - Future Work: project-2-Species_transport_temperature_and_buouancy_solver/future_work.md
   - Project- Ahmed Body:
       - Overview: project-Ahmed-body/overview.md
       - Governing Equations: project-Ahmed-body/governing-equations.md
