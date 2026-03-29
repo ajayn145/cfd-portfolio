@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../governing-equations/">
       
       
         
@@ -19,7 +23,7 @@
     
     
       
-        <title>Limitations - CFD Portfolio - Ajay</title>
+        <title>Vector Calculus - CFD Portfolio - Ajay</title>
       
     
     
@@ -59,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vector-calculus-basics-used-in-this-project" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Limitations
+              Vector Calculus
             
           </span>
         </div>
@@ -517,18 +526,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -549,7 +560,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -592,10 +603,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../vector-calculus-basics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Calculus
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -611,6 +649,315 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Section?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-a-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is a Field?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-nabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. What is Nabla?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gradient
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Gradient">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Divergence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Divergence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-case-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special case (important)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-laplacian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Laplacian
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Laplacian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-understanding_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-connecting-to-this-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Connecting to This Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Connecting to This Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#species-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Species Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Species Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperature-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperature Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperature Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-physical-understanding-of-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Physical Understanding of the System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-line-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Line Understanding
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1170,6 +1517,305 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Section?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-a-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is a Field?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-nabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. What is Nabla?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gradient
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Gradient">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Divergence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Divergence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-case-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special case (important)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-laplacian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Laplacian
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Laplacian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-understanding_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-connecting-to-this-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Connecting to This Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Connecting to This Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#species-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Species Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Species Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperature-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperature Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperature Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terms_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-physical-understanding-of-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Physical Understanding of the System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-line-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Line Understanding
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1186,9 +1832,209 @@
 
 
 
-  <h1>Limitations</h1>
-
-
+<h1 id="vector-calculus-basics-used-in-this-project">Vector Calculus Basics (Used in This Project)</h1>
+<h2 id="why-this-section">Why This Section?</h2>
+<p>In this project, we use mathematical terms such as:</p>
+<ul>
+<li>Nabla</li>
+<li>Divergence</li>
+<li>Laplacian</li>
+</ul>
+<p>These are simply tools used to describe how physical quantities:</p>
+<ul>
+<li>Move</li>
+<li>Spread</li>
+<li>Change in space</li>
+</ul>
+<p>This section explains these ideas in a clear and simple way.</p>
+<hr />
+<h2 id="1-what-is-a-field">1. What is a Field?</h2>
+<p>A field is a quantity defined at every point in space.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Temperature field:
+  T(x, y) → temperature at each location</p>
+</li>
+<li>
+<p>Velocity field:
+  u(x, y) → fluid speed and direction at each location</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-what-is-nabla">2. What is Nabla?</h2>
+<p>Nabla represents change in space.</p>
+<p>It answers the question:</p>
+<ul>
+<li>How does a value change if we move slightly in space?</li>
+</ul>
+<hr />
+<h2 id="3-gradient">3. Gradient</h2>
+<p>Written as:</p>
+<p>grad(T)</p>
+<h3 id="meaning">Meaning</h3>
+<ul>
+<li>Shows the direction in which a value increases the fastest</li>
+<li>Indicates how strong that increase is</li>
+</ul>
+<h3 id="example">Example</h3>
+<ul>
+<li>If temperature increases upward:
+  → Gradient points upward</li>
+</ul>
+<h3 id="simple-understanding">Simple understanding</h3>
+<ul>
+<li>Gradient tells us:
+  Where something increases and how fast</li>
+</ul>
+<hr />
+<h2 id="4-divergence">4. Divergence</h2>
+<p>Written as:</p>
+<p>div(u)</p>
+<h3 id="meaning_1">Meaning</h3>
+<ul>
+<li>Measures how fluid spreads out or comes together</li>
+</ul>
+<h3 id="cases">Cases</h3>
+<ul>
+<li>
+<p>If fluid spreads outward:
+  → Divergence is positive</p>
+</li>
+<li>
+<p>If fluid moves inward:
+  → Divergence is negative</p>
+</li>
+</ul>
+<h3 id="special-case-important">Special case (important)</h3>
+<ul>
+<li>div(u) = 0</li>
+</ul>
+<p>This means:</p>
+<ul>
+<li>Fluid is incompressible</li>
+<li>Volume remains constant</li>
+</ul>
+<hr />
+<h2 id="5-laplacian">5. Laplacian</h2>
+<p>Written as:</p>
+<p>laplacian(T)</p>
+<h3 id="meaning_2">Meaning</h3>
+<ul>
+<li>Measures how different a value is compared to its surroundings</li>
+</ul>
+<h3 id="physical-interpretation">Physical interpretation</h3>
+<ul>
+<li>
+<p>If a point is hotter than nearby points:
+  → Heat spreads outward</p>
+</li>
+<li>
+<p>If a point is colder:
+  → Heat flows inward</p>
+</li>
+</ul>
+<h3 id="simple-understanding_1">Simple understanding</h3>
+<ul>
+<li>Laplacian represents spreading</li>
+</ul>
+<hr />
+<h2 id="6-connecting-to-this-project">6. Connecting to This Project</h2>
+<h3 id="species-equation">Species Equation</h3>
+<p>dC/dt + div(uC) = D * laplacian(C) - kC</p>
+<h4 id="terms">Terms</h4>
+<ul>
+<li>
+<p>dC/dt<br />
+  Change of concentration with time</p>
+</li>
+<li>
+<p>div(uC)<br />
+  Transport due to fluid motion</p>
+</li>
+<li>
+<p>laplacian(C)<br />
+  Diffusion (spreading)</p>
+</li>
+<li>
+<p>kC<br />
+  Reaction (consumption of species)</p>
+</li>
+</ul>
+<hr />
+<h3 id="temperature-equation">Temperature Equation</h3>
+<p>dT/dt + div(uT) = kappa * laplacian(T) + Q * kC</p>
+<h4 id="terms_1">Terms</h4>
+<ul>
+<li>
+<p>dT/dt<br />
+  Change of temperature with time</p>
+</li>
+<li>
+<p>div(uT)<br />
+  Transport due to flow</p>
+</li>
+<li>
+<p>laplacian(T)<br />
+  Heat diffusion</p>
+</li>
+<li>
+<p>Q * kC<br />
+  Heat generation due to reaction</p>
+</li>
+</ul>
+<hr />
+<h2 id="7-physical-understanding-of-the-system">7. Physical Understanding of the System</h2>
+<p>The simulation follows this sequence:</p>
+<ol>
+<li>Reaction occurs  </li>
+<li>Species decreases  </li>
+<li>
+<p>Temperature increases  </p>
+</li>
+<li>
+<p>Heat spreads  </p>
+</li>
+<li>
+<p>Diffusion smooths temperature  </p>
+</li>
+<li>
+<p>Buoyancy starts  </p>
+</li>
+<li>
+<p>Hot fluid rises  </p>
+</li>
+<li>
+<p>Flow develops  </p>
+</li>
+<li>
+<p>Fluid motion carries species and heat  </p>
+</li>
+<li>
+<p>Plume forms  </p>
+</li>
+<li>Visible rising structure appears  </li>
+</ol>
+<hr />
+<h2 id="8-final-summary">8. Final Summary</h2>
+<p>Vector calculus helps describe:</p>
+<ul>
+<li>
+<p>Movement<br />
+  → div(uC)</p>
+</li>
+<li>
+<p>Spreading<br />
+  → laplacian(C)</p>
+</li>
+<li>
+<p>Change over time<br />
+  → d/dt</p>
+</li>
+</ul>
+<hr />
+<h2 id="one-line-understanding">One-Line Understanding</h2>
+<p>Vector calculus is a way to describe how physical quantities move, spread, and change in space.</p>
 
 
 

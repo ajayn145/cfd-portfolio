@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../vector-calculus-basics/">
+      
+      
+        <link rel="next" href="../numerical-method/">
       
       
         
@@ -19,7 +23,7 @@
     
     
       
-        <title>Governing equations - CFD Portfolio - Ajay</title>
+        <title>Governing Equations - CFD Portfolio - Ajay</title>
       
     
     
@@ -59,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#governing-equations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Governing equations
+              Governing Equations
             
           </span>
         </div>
@@ -517,6 +526,601 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vector-calculus-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governing Equations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governing Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-equations-are-being-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Equations Are Being Solved?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-species-transport-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Species Transport Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Species Transport Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-meaning-of-each-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Meaning of Each Term
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-temperature-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Temperature Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Temperature Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-reaction-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Reaction Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Reaction Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-momentum-equation-navierstokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Momentum Equation (Navier–Stokes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-buoyancy-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Buoyancy Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Buoyancy Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-coupling-between-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Coupling Between Equations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Coupling Between Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feedback-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-rayleigh-number-physical-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Rayleigh Number (Physical Insight)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Rayleigh Number (Physical Insight)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Boundary Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numerical-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numerical Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools & Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges & Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learnings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learnings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../future_work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Future Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -528,10 +1132,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -549,8 +1153,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -836,6 +1440,228 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-equations-are-being-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Equations Are Being Solved?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-species-transport-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Species Transport Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Species Transport Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-meaning-of-each-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Meaning of Each Term
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-temperature-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Temperature Equation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Temperature Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-reaction-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Reaction Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Reaction Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-momentum-equation-navierstokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Momentum Equation (Navier–Stokes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-buoyancy-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Buoyancy Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Buoyancy Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-coupling-between-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Coupling Between Equations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Coupling Between Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feedback-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-rayleigh-number-physical-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Rayleigh Number (Physical Insight)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Rayleigh Number (Physical Insight)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Boundary Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -852,9 +1678,137 @@
 
 
 
-  <h1>Governing equations</h1>
-
-
+<h1 id="governing-equations">Governing Equations</h1>
+<h2 id="what-equations-are-being-solved">What Equations Are Being Solved?</h2>
+<p>This project solves a coupled reactive flow problem involving:</p>
+<ul>
+<li>Species transport</li>
+<li>Heat transfer</li>
+<li>Fluid flow</li>
+<li>Buoyancy</li>
+</ul>
+<hr />
+<h2 id="1-species-transport-equation">1. Species Transport Equation</h2>
+<p>The governing equation is:</p>
+<div class="highlight"><pre><span></span><code>dC/dt + div(u*C) = D * laplacian(C) - R
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li>C → species concentration</li>
+<li>u → velocity field</li>
+<li>D → diffusion coefficient</li>
+<li>R → reaction rate</li>
+</ul>
+<hr />
+<h3 id="physical-meaning-of-each-term">Physical Meaning of Each Term</h3>
+<ul>
+<li>dC/dt → change of concentration with time</li>
+<li>div(u*C) → transport due to fluid motion (advection)</li>
+<li>D * laplacian(C) → spreading due to diffusion</li>
+<li>-R → consumption of species due to reaction</li>
+</ul>
+<hr />
+<h2 id="2-temperature-equation">2. Temperature Equation</h2>
+<p>The temperature evolution is given by:</p>
+<div class="highlight"><pre><span></span><code>dT/dt + div(u*T) = kappa * laplacian(T) + Q * R
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li>T → temperature</li>
+<li>kappa → thermal diffusivity</li>
+<li>Q → heat release coefficient</li>
+</ul>
+<hr />
+<h3 id="interpretation">Interpretation</h3>
+<ul>
+<li>Temperature spreads due to diffusion</li>
+<li>Reaction generates heat</li>
+<li>Fluid flow transports heat</li>
+</ul>
+<hr />
+<h2 id="3-reaction-model">3. Reaction Model</h2>
+<p>The reaction rate is defined as:</p>
+<div class="highlight"><pre><span></span><code>R = k0 * C * exp(-Ea / T)
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li>k0 → reaction constant</li>
+<li>Ea → activation energy</li>
+<li>T → temperature</li>
+</ul>
+<hr />
+<h3 id="key-insight">Key Insight</h3>
+<ul>
+<li>Low T → slow reaction</li>
+<li>High T → very fast reaction</li>
+</ul>
+<p>This leads to <strong>thermal runaway behavior</strong>.</p>
+<hr />
+<h2 id="4-momentum-equation-navierstokes">4. Momentum Equation (Navier–Stokes)</h2>
+<p>The velocity field follows:</p>
+<div class="highlight"><pre><span></span><code>du/dt + (u · grad)u = -grad(p) + nu * laplacian(u) + buoyancy
+</code></pre></div>
+<p>And:</p>
+<div class="highlight"><pre><span></span><code>div(u) = 0
+</code></pre></div>
+<p>Where:</p>
+<ul>
+<li>u → velocity</li>
+<li>p → pressure</li>
+<li>nu → kinematic viscosity</li>
+</ul>
+<hr />
+<h2 id="5-buoyancy-model">5. Buoyancy Model</h2>
+<p>Buoyancy force is modeled as:</p>
+<div class="highlight"><pre><span></span><code>buoyancy = T (in vertical direction)
+</code></pre></div>
+<hr />
+<h3 id="interpretation_1">Interpretation</h3>
+<ul>
+<li>Hot fluid rises</li>
+<li>Cold fluid sinks</li>
+</ul>
+<p>This creates <strong>natural convection (plume formation)</strong>.</p>
+<hr />
+<h2 id="6-coupling-between-equations">6. Coupling Between Equations</h2>
+<p>The system is strongly coupled:</p>
+<ul>
+<li>Reaction consumes species → increases temperature</li>
+<li>Temperature increases → accelerates reaction</li>
+<li>Temperature generates buoyancy → induces flow</li>
+<li>Flow transports species and temperature</li>
+</ul>
+<hr />
+<h3 id="feedback-loop">Feedback Loop</h3>
+<div class="highlight"><pre><span></span><code>Temperature ↑ → Reaction ↑ → Temperature ↑
+</code></pre></div>
+<hr />
+<h2 id="7-rayleigh-number-physical-insight">7. Rayleigh Number (Physical Insight)</h2>
+<p>Rayleigh number is estimated as:</p>
+<div class="highlight"><pre><span></span><code>Ra = T / (nu * kappa)
+</code></pre></div>
+<hr />
+<h3 id="meaning">Meaning</h3>
+<ul>
+<li>High Ra → strong convection</li>
+<li>Low Ra → stable diffusion-dominated flow</li>
+</ul>
+<hr />
+<h2 id="8-boundary-conditions">8. Boundary Conditions</h2>
+<ul>
+<li>Velocity: no-slip (u = 0 at all walls)</li>
+<li>Scalars (C, T): initialized as Gaussian distribution</li>
+<li>No inflow or outflow</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>This is a nonlinear coupled system where:</p>
+<ul>
+<li>Diffusion stabilizes</li>
+<li>Reaction destabilizes</li>
+<li>Buoyancy redistributes energy</li>
+</ul>
+<p>This interaction produces complex plume structures similar to real engineering systems.</p>
 
 
 
