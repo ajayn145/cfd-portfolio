@@ -15,8 +15,7 @@ nav:
       - Results: project-1-Species_transport_solver/results.md
       - Learnings: project-1-Species_transport_solver/learnings.md
       - Future Work: project-1-Species_transport_solver/future_work.md
-  - Project 2: 
-    - Ahmed Body:
+  - Project- Ahmed Body:
       - Overview: project-2/overview.md
       - Governing Equations: project-2/governing-equations.md
       - Numerical Method: project-2/numerical-method.md
