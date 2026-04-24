@@ -1,7 +1,5 @@
 ## Flowchart — cavity.c Logic
 
-## Flow Logic — cavity.c
-
 1. Initialize simulation domain and grid
 2. Apply boundary conditions (moving lid + no-slip walls)
 3. Initialize velocity field to zero
