@@ -48,6 +48,16 @@ nav:
       - Results: project-Ahmed-body/results.md
       - Learnings: project-Ahmed-body/learnings.md
       - Future Work: project-Ahmed-body/future_work.md
+  - Project- ROM for Lid Driven Cavity:
+      - Overview: project-cavity/overview.md
+      - Governing Equations: project-cavity/governing-equations.md
+      - Numerical Method: project-cavity/numerical-method.md
+      - Implementation: project-cavity/implementation.md
+      - Tools & Stack: project-cavity/tools.md
+      - Challenges & Debugging: project-cavity/challenges.md
+      - Results: project-cavity/results.md
+      - Learnings: project-cavity/learnings.md
+      - Future Work: project-cavity/future_work.md
 
 markdown_extensions:
   - pymdownx.superfences
