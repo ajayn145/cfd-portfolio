@@ -55,8 +55,8 @@ The flow field was reconstructed using a reduced number of modes.
 ## Spatial Modes
 
 <p align="center">
-  <img src="../images/cavity/mode1_ux.png" width="45%">
-  <img src="../images/cavity/mode1_uy.png" width="45%">
+  <img src="../figures/mode1_ux.png" width="45%">
+  <img src="../figures/mode1_uy.png" width="45%">
 </p>
 
 The first POD mode represents the dominant flow structure.
