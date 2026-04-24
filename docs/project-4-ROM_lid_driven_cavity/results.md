@@ -74,7 +74,7 @@ Higher modes represent minor corrections and localized effects.
 ## Temporal Coefficients
 
 <p align="center">
-  <img src="../images/cavity/temporal_coeffs.png" width="60%">
+  <img src="../figures/temporal_coeffs.png" width="60%">
 </p>
 
 Temporal coefficients describe how each mode evolves over time.
