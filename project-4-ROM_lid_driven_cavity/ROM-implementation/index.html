@@ -23,7 +23,7 @@
     
     
       
-        <title>Implementation - CFD Portfolio - Ajay</title>
+        <title>ROM Implementation - CFD Portfolio - Ajay</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#theoretical-insights-reduced-order-modeling-rom" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementation
+              ROM Implementation
             
           </span>
         </div>
@@ -349,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-1-Species_transport_solver/implementation/" class="md-nav__link">
+      <a href="../../project-1-Species_transport_solver/implementation.md" class="md-nav__link">
         
   
   
@@ -1665,6 +1670,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROM Implementation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1673,7 +1698,7 @@
   <span class="md-ellipsis">
     
   
-    Implementation
+    ROM Implementation
   
 
     
@@ -1682,6 +1707,307 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-reduced-order-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Reduced Order Modeling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-order-model-vs-reduced-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Order Model vs Reduced Order Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Order Model vs Reduced Order Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-order-model-fom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Order Model (FOM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-order-model-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reduced Order Model (ROM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proper-orthogonal-decomposition-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proper Orthogonal Decomposition (POD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proper Orthogonal Decomposition (POD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singular-value-decomposition-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular Value Decomposition (SVD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy-content-of-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy Content of Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mode-truncation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode Truncation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-meaning-of-pod-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Meaning of POD Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporal-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporal Coefficients
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of ROM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of ROM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-projection-based-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Projection-Based ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-driven-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data-Driven ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-rom-works-best" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When ROM Works Best
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-rom-struggles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When ROM Struggles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-cfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to CFD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Takeaway
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1852,6 +2178,298 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-reduced-order-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Reduced Order Modeling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-order-model-vs-reduced-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Order Model vs Reduced Order Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Order Model vs Reduced Order Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-order-model-fom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Order Model (FOM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-order-model-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reduced Order Model (ROM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proper-orthogonal-decomposition-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proper Orthogonal Decomposition (POD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proper Orthogonal Decomposition (POD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singular-value-decomposition-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular Value Decomposition (SVD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy-content-of-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy Content of Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mode-truncation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode Truncation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-meaning-of-pod-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Meaning of POD Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporal-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporal Coefficients
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of ROM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of ROM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-projection-based-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Projection-Based ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-driven-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data-Driven ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-rom-works-best" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When ROM Works Best
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-rom-struggles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When ROM Struggles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-cfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to CFD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Takeaway
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1868,9 +2486,163 @@
 
 
 
-  <h1>Implementation</h1>
-
-
+<h1 id="theoretical-insights-reduced-order-modeling-rom">Theoretical Insights — Reduced Order Modeling (ROM)</h1>
+<h2 id="what-is-reduced-order-modeling">What is Reduced Order Modeling?</h2>
+<p>Reduced Order Modeling (ROM) is a technique used to simplify high-dimensional systems (like CFD simulations) into a much lower-dimensional representation while preserving the dominant physical behavior.</p>
+<p>Instead of solving the governing equations at every grid point, ROM approximates the system using a small number of basis functions (modes).</p>
+<hr />
+<h2 id="full-order-model-vs-reduced-order-model">Full Order Model vs Reduced Order Model</h2>
+<h3 id="full-order-model-fom">Full Order Model (FOM)</h3>
+<ul>
+<li>Solves Navier–Stokes equations on all grid points</li>
+<li>High accuracy</li>
+<li>Very expensive computationally</li>
+<li>Degrees of freedom (DOF): ~10³–10⁷+</li>
+</ul>
+<h3 id="reduced-order-model-rom">Reduced Order Model (ROM)</h3>
+<ul>
+<li>Represents solution using a few modes</li>
+<li>Much faster computation</li>
+<li>Slight loss of accuracy (controlled)</li>
+<li>Degrees of freedom: ~2–50</li>
+</ul>
+<hr />
+<h2 id="core-idea-of-rom">Core Idea of ROM</h2>
+<p>A flow field:</p>
+<p>u(x, y, t)</p>
+<p>is approximated as:</p>
+<p>u(x, y, t) ≈ Σ [ a_i(t) · φ_i(x, y) ]</p>
+<p>Where:
+- φ_i(x, y) → spatial modes (basis functions)
+- a_i(t) → temporal coefficients
+- i = 1 to r, where r &lt;&lt; N</p>
+<hr />
+<h2 id="proper-orthogonal-decomposition-pod">Proper Orthogonal Decomposition (POD)</h2>
+<p>POD is the most widely used method for ROM in fluid mechanics.</p>
+<h3 id="objective">Objective:</h3>
+<p>Find an optimal set of orthogonal basis functions that capture maximum energy (variance) of the system.</p>
+<hr />
+<h2 id="snapshot-method">Snapshot Method</h2>
+<p>Instead of solving eigenvalue problems directly, POD uses simulation data:</p>
+<ol>
+<li>Run CFD simulation  </li>
+<li>Collect snapshots at different time steps  </li>
+<li>Construct snapshot matrix:</li>
+</ol>
+<p>X = [x₁ x₂ x₃ ... xₙ]</p>
+<p>Where each column is a flow field</p>
+<hr />
+<h2 id="singular-value-decomposition-svd">Singular Value Decomposition (SVD)</h2>
+<p>The snapshot matrix is decomposed as:</p>
+<p>X = U Σ Vᵀ</p>
+<p>Where:
+- U → spatial modes
+- Σ → singular values (energy content)
+- Vᵀ → temporal coefficients</p>
+<hr />
+<h2 id="energy-content-of-modes">Energy Content of Modes</h2>
+<p>Energy captured by each mode:</p>
+<p>E_i = σ_i² / Σ(σ_j²)</p>
+<p>Modes are ranked:</p>
+<p>Mode 1 &gt; Mode 2 &gt; Mode 3 &gt; ...</p>
+<hr />
+<h2 id="mode-truncation">Mode Truncation</h2>
+<p>Instead of using all modes:</p>
+<ul>
+<li>Keep only first r modes</li>
+<li>Discard low-energy modes</li>
+</ul>
+<p>This gives:</p>
+<p>X ≈ U_r Σ_r V_rᵀ</p>
+<hr />
+<h2 id="physical-meaning-of-pod-modes">Physical Meaning of POD Modes</h2>
+<ul>
+<li>Mode 1 → dominant flow structure (e.g., main vortex)</li>
+<li>Mode 2+ → corrections / secondary features</li>
+<li>Higher modes → noise or fine-scale structures</li>
+</ul>
+<hr />
+<h2 id="temporal-coefficients">Temporal Coefficients</h2>
+<p>a_i(t) represent how each mode evolves over time.</p>
+<ul>
+<li>Steady flow → coefficients become constant</li>
+<li>Unsteady flow → coefficients oscillate</li>
+</ul>
+<hr />
+<h2 id="types-of-rom">Types of ROM</h2>
+<h3 id="1-projection-based-rom">1. Projection-Based ROM</h3>
+<ul>
+<li>Uses governing equations</li>
+<li>Applies Galerkin projection</li>
+<li>Physically interpretable</li>
+</ul>
+<h3 id="2-data-driven-rom">2. Data-Driven ROM</h3>
+<ul>
+<li>Uses simulation or experimental data</li>
+<li>No direct use of governing equations</li>
+<li>Often combined with machine learning</li>
+</ul>
+<hr />
+<h2 id="advantages-of-rom">Advantages of ROM</h2>
+<ul>
+<li>Significant reduction in computation time</li>
+<li>Enables real-time simulation</li>
+<li>Useful for optimization and control</li>
+<li>Easy integration with ML models</li>
+</ul>
+<hr />
+<h2 id="limitations-of-rom">Limitations of ROM</h2>
+<ul>
+<li>Accuracy depends on quality of snapshots</li>
+<li>Cannot capture unseen physics</li>
+<li>Poor performance for highly nonlinear/turbulent flows (if not trained properly)</li>
+<li>Mode truncation introduces approximation error</li>
+</ul>
+<hr />
+<h2 id="when-rom-works-best">When ROM Works Best</h2>
+<ul>
+<li>Systems with dominant coherent structures</li>
+<li>Low to moderate Reynolds number flows</li>
+<li>Flows with repeating patterns (periodic or quasi-steady)</li>
+</ul>
+<hr />
+<h2 id="when-rom-struggles">When ROM Struggles</h2>
+<ul>
+<li>Highly turbulent flows</li>
+<li>Strongly chaotic systems</li>
+<li>Flows with sudden changes (shock, separation onset)</li>
+</ul>
+<hr />
+<h2 id="connection-to-cfd">Connection to CFD</h2>
+<p>CFD provides:</p>
+<ul>
+<li>High-fidelity data (snapshots)</li>
+</ul>
+<p>ROM provides:</p>
+<ul>
+<li>Compressed representation of that data</li>
+</ul>
+<p>Together:</p>
+<p>CFD → Data → ROM → Fast prediction</p>
+<hr />
+<h2 id="key-insight">Key Insight</h2>
+<p>ROM does not "solve" the physics again.</p>
+<p>Instead, it learns:</p>
+<blockquote>
+<p>"What are the most important patterns in the flow, and how do they evolve?"</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary</h2>
+<ul>
+<li>ROM reduces system dimensionality</li>
+<li>POD extracts dominant flow structures</li>
+<li>SVD provides mathematical decomposition</li>
+<li>Only a few modes are needed to represent complex flows</li>
+<li>Enables fast and efficient simulation</li>
+</ul>
+<hr />
+<h2 id="final-takeaway">Final Takeaway</h2>
+<p>A complex CFD solution with thousands of variables can often be represented using just a few dominant modes without significant loss of accuracy.</p>
 
 
 
