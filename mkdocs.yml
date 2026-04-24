@@ -51,8 +51,8 @@ nav:
   - Project- ROM for Lid Driven Cavity:
       - Overview: project-4-ROM_lid_driven_cavity/overview.md
       - Governing Equations: project-4-ROM_lid_driven_cavity/governing-equations.md
-      - Numerical Method: project-4-ROM_lid_driven_cavity/numerical-method.md
       - ROM Implementation: project-4-ROM_lid_driven_cavity/ROM-implementation.md
+      - Simualtion Logic: project-4-ROM_lid_driven_cavity/simulation-logic.md
       - Tools & Stack: project-4-ROM_lid_driven_cavity/tools.md
       - Challenges & Debugging: project-4-ROM_lid_driven_cavity/challenges.md
       - Results: project-4-ROM_lid_driven_cavity/results.md
