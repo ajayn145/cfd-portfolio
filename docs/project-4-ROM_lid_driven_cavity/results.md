@@ -1,128 +1,124 @@
-# Results & Analysis
+# Results — Reduced Order Modeling of Lid-Driven Cavity Flow
 
-## Drag Force
+## Snapshot Data
 
-From the simulation (`forces.dat`):
+- Total snapshots generated: 101  
+- Grid resolution: 64 × 64  
+- Degrees of freedom: 8192 (u_x and u_y combined)  
 
-- Pressure drag ≈ 23–24 N  
-- Viscous drag ≈ 7–8 N  
-
-Total drag force:
-
-Fd ≈ 31 – 32 N
+The dataset captures the transient evolution of the flow from rest to steady state.
 
 ---
 
-## Drag Coefficient Calculation
+## Energy Distribution of POD Modes
 
-The drag coefficient is defined as:
+The energy captured by each mode is computed using singular values obtained from SVD.
 
-Cd = Fd / (0.5 × rho × U² × A)
+### Observed Distribution:
 
-Where:
-
-- rho = 1.225 kg/m³  
-- U = 25 m/s  
-- A = 0.112 m² (Ahmed body frontal area)
+- Mode 1: 98.43%  
+- Mode 2: 1.38%  
+- Mode 3: 0.15%  
 
 ---
 
-## Step-by-Step Calculation
+## Interpretation
 
-Dynamic pressure:
+- The first mode dominates the system  
+- The flow is highly low-dimensional  
+- Most of the flow physics is captured by a single structure  
 
-q = 0.5 × rho × U²  
-  = 0.5 × 1.225 × 25²  
-  ≈ 382.8 N/m²  
-
----
-
-Force normalization:
-
-qA = 382.8 × 0.112  
-   ≈ 42.9 N  
+This indicates that the lid-driven cavity flow at Re = 100 is governed by a dominant coherent vortex.
 
 ---
 
-Drag coefficient:
+## Flow Reconstruction
 
-Cd = 32 / 42.9  
-   ≈ 0.75  
+The flow field was reconstructed using a reduced number of modes.
 
----
+### Reconstruction Setup:
+- Number of modes used: 5  
 
-## Comparison with Literature
-
-| Quantity | Expected Value | Obtained Value |
-|----------|--------------|---------------|
-| Drag Coefficient (Cd) | ~0.30 | ~0.75 |
+### Error:
+- Relative reconstruction error ≈ 0.003859  
 
 ---
 
-## Observations
+## Interpretation
 
-- The drag coefficient is significantly higher than expected  
-- Flow field appeared stable after 5 seconds  
-- Drag force oscillated around a mean value  
-
----
-
-## Wake Structure
-
-The flow separates at the rear of the Ahmed body, forming a low-velocity wake region.
-
-This recirculation zone contributes significantly to pressure drag.
-
-![Wake Visualization](figures/wake.png)
+- High accuracy achieved with very few modes  
+- Minimal loss of information despite strong dimensionality reduction  
+- Confirms effectiveness of POD for this flow regime  
 
 ---
 
-## Why is Cd High?
+## Spatial Modes
 
-### 1. Coarse Mesh
+<p align="center">
+  <img src="../images/cavity/mode1_ux.png" width="45%">
+  <img src="../images/cavity/mode1_uy.png" width="45%">
+</p>
 
-- Total cells ≈ 40k tetrahedral cells  
-- Insufficient wake resolution  
-- Poor capture of separation  
+The first POD mode represents the dominant flow structure.
 
----
+### Observations:
 
-### 2. Wake Not Properly Resolved
+- u_x mode shows strong shear near the moving lid  
+- u_y mode captures vertical recirculation  
+- The structure corresponds to the primary vortex inside the cavity  
 
-- Recirculation zone exaggerated  
-- Base pressure too low  
-- Leads to higher pressure drag  
-
----
-
-### 3. Lack of Near-Wall Refinement
-
-- Boundary layer not captured properly  
-- Separation point inaccurate  
+Higher modes represent minor corrections and localized effects.
 
 ---
 
-### 4. No Grid Independence Study
+## Temporal Coefficients
 
-- Only one mesh used  
-- Results not validated  
+<p align="center">
+  <img src="../images/cavity/temporal_coeffs.png" width="60%">
+</p>
+
+Temporal coefficients describe how each mode evolves over time.
+
+### Observations:
+
+- Mode 1 increases and stabilizes  
+- Modes 2 and 3 decay to zero  
 
 ---
 
-## Flow Nature
+## Interpretation
 
-- Flow remains transient  
-- Drag fluctuates over time  
-- Mean value stabilizes  
-
-→ This is a **statistically steady flow**, not a steady-state solution  
+- Flow starts from rest and develops over time  
+- System reaches steady state  
+- No sustained oscillations are present  
 
 ---
 
 ## Key Insight
 
-- Solver setup is correct  
-- Simulation is stable  
-- Error mainly comes from mesh quality  
+The flow can be effectively represented as:
 
-→ Physics is captured qualitatively, not quantitatively accurate yet
+- One dominant mode (primary vortex)  
+- Small transient corrections  
+
+This confirms that the system is strongly low-dimensional.
+
+---
+
+## Limitations of Results
+
+- Flow is steady and lacks dynamic richness  
+- Temporal behavior is not oscillatory  
+- Predictive ROM is limited in this case  
+
+---
+
+## Overall Conclusion
+
+- POD successfully reduces system dimensionality  
+- A small number of modes capture most of the physics  
+- Lid-driven cavity flow at low Reynolds number is highly compressible in modal space  
+
+This validates the use of POD for efficient representation of laminar flow systems.
+
+---
