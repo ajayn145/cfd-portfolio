@@ -19,7 +19,7 @@
     
     
       
-        <title>Ahmed Body Aerodynamics Study (OpenFOAM) - CFD Portfolio - Ajay</title>
+        <title>ROM for Lid Driven Cavity (Basilisk) - CFD Portfolio - Ajay</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ahmed-body-aerodynamics-study-openfoam" class="md-skip">
+        <a href="#rom-for-lid-driven-cavity-basilisk" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ahmed Body Aerodynamics Study (OpenFOAM)
+              ROM for Lid Driven Cavity (Basilisk)
             
           </span>
         </div>
@@ -1930,10 +1930,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#engineering-log" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Engineering Log
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Direction
       
     </span>
   </a>
@@ -1957,74 +1979,126 @@
 
 
 
-<h1 id="ahmed-body-aerodynamics-study-openfoam">Ahmed Body Aerodynamics Study (OpenFOAM)</h1>
+<h1 id="rom-for-lid-driven-cavity-basilisk">ROM for Lid Driven Cavity (Basilisk)</h1>
 <h2 id="problem-statement">Problem Statement</h2>
-<p>The objective of this project is to simulate external flow over a 25° Ahmed body and estimate the drag coefficient.</p>
-<p>The Ahmed body is a simplified car-like geometry widely used in automotive aerodynamics to study flow separation and wake behavior.</p>
+<p>The objective of this project is to develop a Reduced Order Model (ROM) for a 2D incompressible lid-driven cavity flow.</p>
+<p>Instead of solving the full Navier–Stokes equations at every grid point, the goal is to extract dominant flow structures and represent the system using a reduced number of variables.</p>
+<p>This is achieved using Proper Orthogonal Decomposition applied to high-fidelity CFD data generated using Basilisk</p>
 <hr />
 <h2 id="engineering-relevance">Engineering Relevance</h2>
-<p>Understanding flow over bluff bodies is critical in automotive design because:</p>
+<p>High-fidelity CFD simulations are computationally expensive and not suitable for:</p>
 <ul>
-<li>Drag directly affects fuel efficiency</li>
-<li>Wake structure influences vehicle stability</li>
-<li>Pressure distribution determines aerodynamic performance</li>
+<li>Real-time simulations</li>
+<li>Optimization loops</li>
+<li>Digital twin applications</li>
+<li>Control systems</li>
 </ul>
-<p>The Ahmed body provides a benchmark case for validating CFD setups.</p>
+<p>Reduced Order Modeling addresses this by:</p>
+<ul>
+<li>Compressing large CFD datasets</li>
+<li>Identifying dominant flow physics</li>
+<li>Enabling fast approximate solutions</li>
+</ul>
+<p>ROM is widely used in:</p>
+<ul>
+<li>Automotive aerodynamics</li>
+<li>Thermal management systems</li>
+<li>Flow control and optimization</li>
+<li>Machine learning-based CFD</li>
+</ul>
 <hr />
 <h2 id="what-was-done">What Was Done</h2>
 <p>In this project:</p>
 <ul>
-<li>A transient CFD simulation was set up using OpenFOAM</li>
-<li>The case was adapted from the <code>pitzDaily</code> tutorial</li>
-<li>The PIMPLE algorithm was used for pressure-velocity coupling</li>
-<li>The k-omega SST turbulence model was applied</li>
-<li>The simulation was run up to 5 seconds to allow wake development</li>
-<li>Forces were computed using OpenFOAM function objects</li>
+<li>A transient CFD simulation of lid-driven cavity flow was performed using Basilisk</li>
+<li>The domain was discretized using a 64 × 64 Cartesian grid</li>
+<li>Reynolds number was set to 100 (laminar regime)</li>
+<li>Velocity field snapshots were exported at regular time intervals</li>
+</ul>
+<p>Post-processing steps:</p>
+<ul>
+<li>Velocity fields ((u_x, u_y)) were flattened into vectors</li>
+<li>A snapshot matrix was constructed from all time steps</li>
+<li>POD was applied using Singular Value Decomposition (SVD)</li>
+<li>Dominant modes and their energy contributions were extracted</li>
+<li>Flow reconstruction was performed using a reduced number of modes</li>
 </ul>
 <hr />
 <h2 id="key-challenges">Key Challenges</h2>
-<p>During the setup and execution, multiple issues were encountered:</p>
+<p>During the development, several technical issues were encountered:</p>
 <ul>
-<li>PIMPLE dictionary undefined</li>
-<li>Missing OmegaFinal entry</li>
-<li>wallDist not defined</li>
-<li>Missing div(phi,omega) term</li>
-<li>meshWave typo in fvSchemes</li>
-<li>Courant number instability</li>
-<li>forces.dat not generated</li>
-<li>Uncertainty in frontal area for Cd calculation</li>
+<li>Handling viscosity field definition (mu) in Basilisk</li>
+<li>Conflict between constant and variable field representations</li>
+<li>OpenGL dependency errors due to view.h</li>
+<li>Ensuring consistent grid structure across all snapshots</li>
+<li>Converting unstructured CFD output into matrix form for POD</li>
+<li>Understanding physical meaning of POD modes and coefficients</li>
 </ul>
-<p>These challenges required debugging at both solver and physics levels.</p>
+<p>These required debugging at both solver and data-processing levels.</p>
 <hr />
 <h2 id="flow-behavior-observed">Flow Behavior Observed</h2>
 <ul>
-<li>Flow separates at the slanted rear surface</li>
-<li>A recirculation region forms behind the body</li>
-<li>The wake remains unsteady</li>
-<li>Drag force oscillates around a mean value</li>
+<li>The flow is driven by the motion of the top lid</li>
+<li>A primary vortex forms at the center of the cavity</li>
+<li>Weak secondary recirculation regions appear near corners</li>
+<li>Initial transient behavior is observed</li>
+<li>The flow eventually reaches a steady state</li>
 </ul>
-<p>Even after 5 seconds, the flow remained transient but reached a statistically steady state.</p>
+<p>Temporal analysis showed:</p>
+<ul>
+<li>Dominant mode stabilizes over time</li>
+<li>Higher modes decay rapidly</li>
+</ul>
 <hr />
 <h2 id="results-preliminary">Results (Preliminary)</h2>
-<ul>
-<li>Drag force ≈ 32 N</li>
-<li>Estimated Cd ≈ 0.75</li>
-</ul>
-<p>Expected Cd ≈ 0.3 (literature value)</p>
+<p>Total snapshots: 101
+Degrees of freedom: 8192
+Energy Distribution:
+ - Mode 1: 98.43%
+ - Mode 2: 1.38%
+ - Mode 3: 0.15%
+Reconstruction:
+ - Using 5 modes → error ≈ 0.003859</p>
 <hr />
 <h2 id="initial-analysis">Initial Analysis</h2>
-<p>The higher drag coefficient is attributed to:</p>
+<p>The results indicate that:</p>
 <ul>
-<li>Coarse mesh (~40k tetrahedral cells)</li>
-<li>Poor resolution of wake region</li>
-<li>Lack of near-wall refinement</li>
+<li>The flow is highly low-dimensional</li>
+<li>A single dominant structure (primary vortex) governs the system</li>
+<li>Higher modes represent transient corrections</li>
+<li>The system quickly converges to steady state</li>
 </ul>
-<p>The solver setup is stable, but the solution is not yet grid-independent.</p>
+<p>This explains why:</p>
+<ul>
+<li>POD captures most energy in the first mode</li>
+<li>Temporal coefficients stabilize over time</li>
+</ul>
 <hr />
-<h2 id="engineering-log">Engineering Log</h2>
-<p>The complete step-by-step development process is documented below:</p>
-<iframe src="https://nbviewer.org/github/ajayn145/AhmedBody_OpenFOAM12/blob/main/notebooks/01_Engineering_Log.ipynb"
-width="100%" height="900px"></iframe>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>Flow is steady → lacks dynamic richness</li>
+<li>No oscillatory behavior (no vortex shedding)</li>
+<li>Limited scope for predictive ROM modeling</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>This project demonstrates that:</p>
+<ul>
+<li>Complex CFD systems can be reduced to a small set of dominant modes</li>
+<li>POD effectively separates spatial and temporal behavior</li>
+<li>Lid-driven cavity flow is strongly low-dimensional</li>
+</ul>
+<p>The ROM developed is accurate for reconstruction but limited in predictive capability due to steady-state nature of the flow.</p>
+<hr />
+<h2 id="future-direction">Future Direction</h2>
+<p>To extend this work:</p>
+<ul>
+<li>Apply ROM to unsteady flows (e.g., flow past cylinder)</li>
+<li>Capture oscillatory dynamics and vortex shedding</li>
+<li>Develop predictive ROM using temporal coefficients</li>
+<li>Integrate machine learning models for time evolution</li>
+</ul>
+<hr />
 
 
 
