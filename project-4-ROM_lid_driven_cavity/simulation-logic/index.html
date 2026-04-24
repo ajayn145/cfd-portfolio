@@ -1731,10 +1731,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#time-loop-begins" class="md-nav__link">
+  <a href="#flow-logic-cavityc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        | Time Loop Begins |
+        Flow Logic — cavity.c
       
     </span>
   </a>
@@ -1933,10 +1933,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#time-loop-begins" class="md-nav__link">
+  <a href="#flow-logic-cavityc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        | Time Loop Begins |
+        Flow Logic — cavity.c
       
     </span>
   </a>
@@ -1963,42 +1963,26 @@
   <h1>Simualtion Logic</h1>
 
 <h2 id="flowchart-cavityc-logic">Flowchart — cavity.c Logic</h2>
-<p>Start
-  |
-  v
-Initialize Domain &amp; Grid
-  |
-  v
-Apply Boundary Conditions
-  |
-  v
-Initialize Velocity Field (u = 0)
-  |
-  v</p>
+<h2 id="flow-logic-cavityc">Flow Logic — cavity.c</h2>
+<ol>
+<li>Initialize simulation domain and grid</li>
+<li>Apply boundary conditions (moving lid + no-slip walls)</li>
+<li>Initialize velocity field to zero</li>
+<li>Start time-stepping loop:</li>
+<li>Update viscosity field</li>
+<li>Solve Navier–Stokes equations</li>
+<li>Export snapshots at fixed time intervals</li>
+<li>Advance time</li>
+<li>Repeat until final time is reached</li>
+<li>End simulation</li>
+</ol>
 <hr />
-<h2 id="time-loop-begins">|        Time Loop Begins        |</h2>
-<p>|
-  v
-Update Viscosity (mu)
-  |
-  v
-Solve Navier–Stokes Equations
-  |
-  v
-Check Time Condition
-  |
-  +----&gt; Write Snapshot (every dt)
-  |
-  v
-Advance Time
-  |
-  v
-Is End Time Reached?
-  |
-  +---- No ----&gt; Repeat Loop
-  |
-  +---- Yes ---&gt; End Simulation</p>
-<p><img alt="cavity_code" src="../figures/cavity_code.png" /></p>
+<p>Simualtion Logic in Basilisk
+<img alt="cavity_code" src="../figures/cavity_code.png" /></p>
+<hr />
+<p>Post processing using POD (Proper Orthogonal Decomposition)
+<img alt="cavity_code" src="../figures/pod_rom_1.png" />
+<img alt="cavity_code" src="../figures/pod_rom_2.png" /></p>
 
 
 
