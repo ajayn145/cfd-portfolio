@@ -40,4 +40,4 @@ Is End Time Reached?
   
   
   
-  ![cavity_code](figures/cavity_code.png)
+![cavity_code](figures/cavity_code.png)
