@@ -21,5 +21,5 @@ Simualtion Logic in Basilisk
 ---
 
 Post processing using POD (Proper Orthogonal Decomposition)
-![cavity_code](figures/pod_rom_1.png)
-![cavity_code](figures/pod_rom_2.png)
+![pom_1](figures/pod_rom_1.png)
+![pom_2](figures/pod_rom_2.png)
