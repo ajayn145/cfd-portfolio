@@ -20,7 +20,7 @@ Understanding this logic is important because ROM is not just a Python script—
 
 					The overall project logic follows:
 
-					```text
+					
 					Define Physical Problem
 						↓
 					Create Computational Domain
