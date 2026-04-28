@@ -54,6 +54,12 @@ nav:
       - ROM Implementation: project-4-ROM_lid_driven_cavity/ROM-implementation.md
       - Simualtion Logic: project-4-ROM_lid_driven_cavity/simulation-logic.md
       - Results: project-4-ROM_lid_driven_cavity/results.md
+  - Project- ROM for Flow around a cylinder:
+      - Overview: project-5-ROM_flow_around_a_cylinder/overview.md
+      - Governing Equations: pproject-5-ROM_flow_around_a_cylinder/governing-equations.md
+      - ROM Implementation: project-5-ROM_flow_around_a_cylinder/ROM-implementation.md
+      - Simualtion Logic: project-5-ROM_flow_around_a_cylinder/simulation-logic.md
+      - Results: project-5-ROM_flow_around_a_cylinder/results.md
 
 
 markdown_extensions:
