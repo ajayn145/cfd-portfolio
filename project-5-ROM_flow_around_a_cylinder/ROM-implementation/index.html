@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../simulation-logic/">
       
       
         
@@ -19,7 +23,7 @@
     
     
       
-        <title>Theoretical Insights — Reduced Order Modeling (ROM) - CFD Portfolio - Ajay</title>
+        <title>ROM Implementation - CFD Portfolio - Ajay</title>
       
     
     
@@ -96,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Theoretical Insights — Reduced Order Modeling (ROM)
+              ROM Implementation
             
           </span>
         </div>
@@ -1687,6 +1691,531 @@
   
     <li class="md-nav__item">
       <a href="../../project-4-ROM_lid_driven_cavity/results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project- ROM for Flow around a cylinder
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project- ROM for Flow around a cylinder
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pproject-5-ROM_flow_around_a_cylinder/governing-equations.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governing Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROM Implementation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROM Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-reduced-order-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Reduced Order Modeling?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-order-model-vs-reduced-order-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Order Model vs Reduced Order Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Order Model vs Reduced Order Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-order-model-fom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Order Model (FOM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-order-model-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reduced Order Model (ROM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-idea-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proper-orthogonal-decomposition-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proper Orthogonal Decomposition (POD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proper Orthogonal Decomposition (POD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singular-value-decomposition-svd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular Value Decomposition (SVD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy-content-of-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy Content of Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mode-truncation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode Truncation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#physical-meaning-of-pod-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Meaning of POD Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporal-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporal Coefficients
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of ROM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of ROM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-projection-based-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Projection-Based ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-driven-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data-Driven ROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-rom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations of ROM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-rom-works-best" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When ROM Works Best
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-rom-struggles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When ROM Struggles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-cfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to CFD
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Takeaway
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simualtion Logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../results/" class="md-nav__link">
         
   
   
