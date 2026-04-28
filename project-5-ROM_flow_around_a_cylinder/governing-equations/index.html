@@ -19,7 +19,7 @@
     
     
       
-        <title>Governing Equations — Lid-Driven Cavity Flow - CFD Portfolio - Ajay</title>
+        <title>Governing Equations - CFD Portfolio - Ajay</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#governing-equations-lid-driven-cavity-flow" class="md-skip">
+        <a href="#governing-equations" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Governing Equations — Lid-Driven Cavity Flow
+              Governing Equations
             
           </span>
         </div>
@@ -237,7 +237,7 @@
   <span class="md-ellipsis">
     
   
-    Project 1
+    Project 1-Species Transport Solver
   
 
     
@@ -253,7 +253,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project 1
+    Project 1-Species Transport Solver
   
 
           </label>
@@ -543,7 +543,7 @@
   <span class="md-ellipsis">
     
   
-    Project 2
+    Project 2-Species Transport Temperature and Buouancy Solver
   
 
     
@@ -559,7 +559,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project 2
+    Project 2-Species Transport Temperature and Buouancy Solver
   
 
           </label>
@@ -905,7 +905,7 @@
   <span class="md-ellipsis">
     
   
-    Project 3
+    Project 3-Vortex Dynamics
   
 
     
@@ -921,7 +921,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project 3
+    Project 3-Vortex Dynamics
   
 
           </label>
@@ -1946,6 +1946,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#physical-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continuity-equation-mass-conservation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1954,30 +1965,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Continuity Equation (Mass Conservation)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#physical-meaning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Physical Meaning
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#momentum-equation-navierstokes" class="md-nav__link">
+  <a href="#momentum-equation-navierstokes-equation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Momentum Equation (Navier–Stokes)
+        Momentum Equation (Navier–Stokes Equation)
       
     </span>
   </a>
@@ -1985,15 +1979,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#term-by-term-explanation" class="md-nav__link">
+  <a href="#physical-meaning-of-each-term" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Term-by-Term Explanation
+        Physical Meaning of Each Term
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Term-by-Term Explanation">
+    <nav class="md-nav" aria-label="Physical Meaning of Each Term">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2033,7 +2027,7 @@
   <a href="#4-viscous-diffusion-term" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Viscous (Diffusion) Term
+        4. Viscous Diffusion Term
       
     </span>
   </a>
@@ -2054,34 +2048,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Reynolds Number">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-this-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        In This Project:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interpretation:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2097,10 +2063,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#top-wall-moving-lid" class="md-nav__link">
+  <a href="#1-inlet-boundary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Top Wall (Moving Lid)
+        1. Inlet Boundary
       
     </span>
   </a>
@@ -2108,10 +2074,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bottom-and-side-walls-no-slip" class="md-nav__link">
+  <a href="#2-cylinder-surface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bottom and Side Walls (No-slip)
+        2. Cylinder Surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-outlet-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Outlet Boundary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-top-and-bottom-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Top and Bottom Boundaries
       
     </span>
   </a>
@@ -2124,21 +2112,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pressure-treatment" class="md-nav__link">
+  <a href="#embedded-boundary-method-in-basilisk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pressure Treatment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assumptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Assumptions
+        Embedded Boundary Method in Basilisk
       
     </span>
   </a>
@@ -2157,10 +2134,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
+  <a href="#pod-mathematical-idea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Insight
+        POD Mathematical Idea
       
     </span>
   </a>
@@ -2168,10 +2145,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-pod-is-useful-here" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        Why POD is Useful Here
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Insight
       
     </span>
   </a>
@@ -2195,133 +2183,251 @@
 
 
 
-<h1 id="governing-equations-lid-driven-cavity-flow">Governing Equations — Lid-Driven Cavity Flow</h1>
+<h1 id="governing-equations">Governing Equations</h1>
 <h2 id="introduction">Introduction</h2>
-<p>The flow inside the lid-driven cavity is governed by the incompressible Navier–Stokes equations, which describe conservation of mass and momentum for a Newtonian fluid.</p>
-<p>These equations form the mathematical foundation of the CFD simulation performed in this project.</p>
+<p>The flow around a circular cylinder at Reynolds number Re = 100 is governed by the incompressible Navier–Stokes equations.</p>
+<p>Since the objective of this project is to perform Reduced Order Modeling (ROM) using Proper Orthogonal Decomposition (POD), it is important to first understand the full-order mathematical model (FOM) from which the reduced model is derived.</p>
+<p>In ROM, we do not directly solve the reduced equations first.</p>
+<p>Instead, we follow:</p>
+<p>Full CFD Simulation → Snapshot Generation → POD → Reduced Order Representation</p>
+<p>This means the governing equations of the CFD simulation form the mathematical foundation of the entire ROM framework.</p>
+<hr />
+<h2 id="physical-assumptions">Physical Assumptions</h2>
+<p>The simulation is based on the following assumptions:</p>
+<ul>
+<li>Two-dimensional flow</li>
+<li>Incompressible fluid</li>
+<li>Laminar flow regime</li>
+<li>Newtonian fluid</li>
+<li>Constant density</li>
+<li>Constant viscosity</li>
+<li>Isothermal flow</li>
+<li>No body forces</li>
+<li>No heat transfer effects</li>
+</ul>
+<p>Since the Reynolds number is:</p>
+<pre><code>            Re = 100
+</code></pre>
+<p>the flow lies in the laminar unsteady regime where wake instability and vortex shedding begin to appear.</p>
+<p>This makes it an ideal benchmark problem for POD-based Reduced Order Modeling.</p>
 <hr />
 <h2 id="continuity-equation-mass-conservation">Continuity Equation (Mass Conservation)</h2>
-<p>For incompressible flow:</p>
-<p>∇ · u = 0</p>
-<p>Where:
-- u = (u_x, u_y) is the velocity vector</p>
-<h3 id="physical-meaning">Physical Meaning</h3>
-<ul>
-<li>Ensures mass conservation</li>
-<li>No accumulation of mass within the domain</li>
-<li>Flow entering a control volume equals flow leaving it</li>
-</ul>
+<p>For incompressible flow, conservation of mass requires:</p>
+<pre><code>        ∇ · u = 0
+</code></pre>
+<p>where:</p>
+<pre><code>        u = (ux, uy)
+</code></pre>
+<p>is the velocity vector.</p>
+<p>This equation ensures that the fluid volume remains conserved and no artificial compression occurs inside the computational domain.</p>
+<p>Physically, this means:</p>
+<p>Whatever fluid enters a control volume must also leave it.</p>
+<p>This is the first condition that must always be satisfied in incompressible CFD.</p>
 <hr />
-<h2 id="momentum-equation-navierstokes">Momentum Equation (Navier–Stokes)</h2>
-<p>∂u/∂t + (u · ∇)u = - (1/ρ) ∇p + ν ∇²u</p>
-<p>Where:
-- u → velocity vector
-- p → pressure
-- ρ → density
-- ν → kinematic viscosity</p>
+<h2 id="momentum-equation-navierstokes-equation">Momentum Equation (Navier–Stokes Equation)</h2>
+<p>The incompressible Navier–Stokes momentum equation is:</p>
+<pre><code>    ∂u/∂t + (u · ∇)u = -∇p + ν∇²u
+</code></pre>
+<p>where:</p>
+<pre><code>    - u = velocity vector
+    - p = pressure
+    - ν = kinematic viscosity
+    - t = time
+</code></pre>
+<p>This equation represents Newton’s Second Law applied to fluid motion.</p>
+<p>It balances:</p>
+<pre><code>    - acceleration
+    - convection
+    - pressure forces
+    - viscous diffusion
+</code></pre>
+<p>and governs the entire flow physics around the cylinder.</p>
 <hr />
-<h2 id="term-by-term-explanation">Term-by-Term Explanation</h2>
+<h2 id="physical-meaning-of-each-term">Physical Meaning of Each Term</h2>
 <h3 id="1-transient-term">1. Transient Term</h3>
 <p>∂u/∂t</p>
-<ul>
-<li>Represents time-dependent changes in velocity</li>
-<li>Important during flow startup and evolution</li>
-</ul>
+<p>This represents:</p>
+<p>Change of velocity with time</p>
+<p>This term is responsible for capturing:</p>
+<pre><code>    - unsteady flow behavior
+    - wake development
+    - vortex shedding
+    - time-dependent flow structures
+</code></pre>
+<p>Without this term, the simulation would only capture steady-state flow.</p>
+<p>Since cylinder wake flow is inherently unsteady, this term is essential.</p>
 <hr />
 <h3 id="2-convective-term">2. Convective Term</h3>
-<p>(u · ∇)u</p>
-<ul>
-<li>Represents transport of momentum by the fluid</li>
-<li>Introduces nonlinearity into the equations</li>
-</ul>
+<pre><code>    (u · ∇)u
+</code></pre>
+<p>This represents:</p>
+<p>Momentum carried by the moving fluid itself</p>
+<p>This term is responsible for:</p>
+<pre><code>    - flow separation
+    - wake formation
+    - nonlinear flow behavior
+    - vortex transport
+</code></pre>
+<p>This is the most important source of complexity in bluff-body external aerodynamics.</p>
+<p>It is also the reason why vortex shedding becomes difficult to predict and why ROM becomes useful.</p>
 <hr />
 <h3 id="3-pressure-gradient-term">3. Pressure Gradient Term</h3>
-<p>-∇p</p>
-<ul>
-<li>Drives the flow</li>
-<li>Adjusts to maintain incompressibility</li>
-</ul>
+<pre><code>-∇p
+</code></pre>
+<p>This represents:</p>
+<p>Force generated by pressure differences</p>
+<p>Pressure redistributes momentum throughout the domain and helps enforce incompressibility.</p>
+<p>In Basilisk, pressure is solved using the pressure Poisson equation during pressure–velocity coupling.</p>
+<p>This was also the main source of convergence warnings during the project.</p>
 <hr />
-<h3 id="4-viscous-diffusion-term">4. Viscous (Diffusion) Term</h3>
-<p>ν ∇²u</p>
-<ul>
-<li>Represents momentum diffusion due to viscosity</li>
-<li>Smooths velocity gradients</li>
-<li>Dominant in laminar flows</li>
-</ul>
+<h3 id="4-viscous-diffusion-term">4. Viscous Diffusion Term</h3>
+<pre><code>ν∇²u
+</code></pre>
+<p>This represents:</p>
+<p>Momentum diffusion caused by viscosity</p>
+<p>It smooths the velocity field and resists strong velocity gradients.</p>
+<p>At Re = 100, viscosity is still significant and strongly affects:</p>
+<pre><code>- wake stability
+- boundary layer growth
+- vortex formation
+</code></pre>
 <hr />
 <h2 id="reynolds-number">Reynolds Number</h2>
-<p>Re = (U L) / ν</p>
-<p>Where:
-- U → lid velocity
-- L → cavity length
-- ν → kinematic viscosity</p>
-<h3 id="in-this-project">In This Project:</h3>
-<p>Re = 100</p>
-<h3 id="interpretation">Interpretation:</h3>
-<ul>
-<li>Flow is laminar</li>
-<li>Viscous effects dominate</li>
-<li>System evolves to steady state</li>
-</ul>
+<p>The most important dimensionless parameter for this problem is the Reynolds number:</p>
+<p>Re = UD/ν</p>
+<p>where:</p>
+<pre><code>- U = free-stream inlet velocity
+- D = cylinder diameter
+- ν = kinematic viscosity
+</code></pre>
+<p>In this project:</p>
+<pre><code>Re = 100
+</code></pre>
+<p>This Reynolds number determines the competition between:</p>
+<pre><code>- inertial forces
+- viscous forces
+</code></pre>
+<p>At this value:</p>
+<pre><code>- the wake becomes unstable
+- recirculation appears
+- periodic vortex shedding begins
+- transient behavior becomes important
+</code></pre>
+<p>This is exactly why POD becomes meaningful.</p>
+<p>If Re were too low, the flow would remain mostly steady and ROM would show only one dominant steady mode.</p>
 <hr />
 <h2 id="boundary-conditions">Boundary Conditions</h2>
-<h3 id="top-wall-moving-lid">Top Wall (Moving Lid)</h3>
-<p>u_x = U
-u_y = 0</p>
-<ul>
-<li>Drives the flow inside the cavity</li>
-</ul>
+<p>Correct boundary conditions are critical for capturing realistic wake behavior.</p>
+<h3 id="1-inlet-boundary">1. Inlet Boundary</h3>
+<p>Uniform free-stream velocity is imposed:</p>
+<pre><code>ux = U0
+
+uy = 0
+</code></pre>
+<p>This creates the incoming flow approaching the cylinder.</p>
+<p>It represents an external flow problem rather than an internal confined flow like the lid-driven cavity.</p>
 <hr />
-<h3 id="bottom-and-side-walls-no-slip">Bottom and Side Walls (No-slip)</h3>
-<p>u_x = 0
-u_y = 0</p>
+<h3 id="2-cylinder-surface">2. Cylinder Surface</h3>
+<p>No-slip wall condition:</p>
+<pre><code>ux = 0
+
+uy = 0
+</code></pre>
+<p>This creates:</p>
 <ul>
-<li>Fluid sticks to the wall</li>
+<li>boundary layer development</li>
+<li>adverse pressure gradient</li>
+<li>flow separation</li>
+<li>wake formation</li>
 </ul>
+<p>This is where the most important flow physics originate.</p>
+<p>Without no-slip walls, there would be no vortex shedding.</p>
 <hr />
-<h2 id="pressure-treatment">Pressure Treatment</h2>
-<ul>
-<li>Pressure is not explicitly prescribed</li>
-<li>It is computed to enforce ∇ · u = 0</li>
-<li>Ensures incompressibility constraint is satisfied</li>
-</ul>
+<h3 id="3-outlet-boundary">3. Outlet Boundary</h3>
+<p>Outflow boundary condition:</p>
+<pre><code>∂u/∂n = 0
+</code></pre>
+<p>This allows the fluid to leave the computational domain naturally without artificial reflection.</p>
+<p>It helps preserve realistic wake development behind the cylinder.</p>
 <hr />
-<h2 id="assumptions">Assumptions</h2>
-<ul>
-<li>Incompressible flow</li>
-<li>Newtonian fluid</li>
-<li>Constant viscosity</li>
-<li>No body forces (gravity neglected)</li>
-<li>Two-dimensional domain</li>
-</ul>
+<h3 id="4-top-and-bottom-boundaries">4. Top and Bottom Boundaries</h3>
+<p>Free-slip / open boundaries are used to avoid artificial confinement effects.</p>
+<p>This allows the wake to develop naturally without strong wall interference.</p>
+<hr />
+<h2 id="embedded-boundary-method-in-basilisk">Embedded Boundary Method in Basilisk</h2>
+<p>Instead of generating a body-fitted mesh around the circular cylinder, Basilisk uses:</p>
+<pre><code>    "embed.h"
+</code></pre>
+<p>which applies the Embedded Boundary Method.</p>
+<p>The cylinder geometry is defined using:</p>
+<pre><code>solid(cs, fs, sq(x) + sq(y) - sq(RADIUS));
+</code></pre>
+<p>where:</p>
+<pre><code>- cs = cell fraction
+- fs = face fraction
+</code></pre>
+<p>This method allows:</p>
+<pre><code>- easy geometry representation
+- Cartesian adaptive grids
+- simpler meshing
+- faster solver implementation
+- robust boundary handling
+</code></pre>
+<p>This is one of the strongest advantages of Basilisk over traditional mesh-heavy CFD workflows.</p>
 <hr />
 <h2 id="connection-to-reduced-order-modeling-rom">Connection to Reduced Order Modeling (ROM)</h2>
-<p>The governing equations define the full-order system:</p>
-<p>u(x, y, t)</p>
-<p>ROM approximates this as:</p>
-<p>u(x, y, t) ≈ Σ [ a_i(t) · φ_i(x, y) ]</p>
-<p>Where:
-- φ_i(x, y) → spatial modes
-- a_i(t) → temporal coefficients
-- i = 1 to r, where r &lt;&lt; N</p>
+<p>The Navier–Stokes equations define the Full Order Model (FOM) which is computationally expensive.
+A full CFD simulation may contain Thousands to millions of degrees of freedom and repeated solving becomes expensive. POD is applied to the CFD solution to build the:</p>
+<p>Reduced Order Model (ROM), Instead of solving the full system repeatedly, ROM represents the flow using Few dominant spatial modes + temporal coefficients. This dramatically reduces computational cost while preserving the dominant system physics. This is the core purpose of this project.</p>
 <hr />
-<h2 id="key-insight">Key Insight</h2>
-<p>Instead of solving Navier–Stokes equations at all grid points:</p>
-<ul>
-<li>Solve for a small number of modal coefficients</li>
-<li>Capture dominant flow physics efficiently</li>
-</ul>
+<h2 id="pod-mathematical-idea">POD Mathematical Idea</h2>
+<p>The CFD snapshots are arranged into a matrix:</p>
+<pre><code>X = [x1  x2  x3  ...  xn]
+</code></pre>
+<p>where each column is one velocity snapshot.</p>
+<p>Then Singular Value Decomposition (SVD) is applied:</p>
+<pre><code>X = UΣVᵀ
+</code></pre>
+<p>where:</p>
+<pre><code>- U = spatial POD modes
+- Σ = singular values (energy content)
+- Vᵀ = temporal coefficients
+</code></pre>
+<p>This allows the flow to be written as:</p>
+<pre><code>Flow ≈ Mean + Few Dominant Modes
+</code></pre>
+<p>instead of solving the full Navier–Stokes equations every time.</p>
+<p>This is how CFD becomes computationally efficient.</p>
 <hr />
-<h2 id="summary">Summary</h2>
+<h2 id="why-pod-is-useful-here">Why POD is Useful Here</h2>
+<p>For cylinder flow, POD helps answer:</p>
+<pre><code>    What are the most energetic structures in the wake?  and
+    Is the flow dominated by steady wake behavior or oscillatory vortex shedding?
+</code></pre>
+<p>In this project, POD showed:</p>
+<pre><code>- Mode 1 captured almost all system energy
+- Higher modes were weak
+</code></pre>
+<p>This indicated that Mean wake structure dominated over oscillatory vortex shedding. This is a physically meaningful engineering conclusion.</p>
+<hr />
+<h2 id="final-insight">Final Insight</h2>
 <ul>
-<li>Navier–Stokes equations govern fluid motion</li>
-<li>Continuity ensures mass conservation</li>
-<li>Momentum equation balances forces</li>
-<li>Reynolds number defines flow regime</li>
-<li>Boundary conditions drive cavity circulation</li>
+<li>
+<p>The governing equations remain exactly the same.</p>
+</li>
+<li>
+<p>ROM does not change the physics.</p>
+</li>
 </ul>
-<p>These equations form the foundation of the high-fidelity simulation used to build the reduced order model.</p>
+<p>It changes only:</p>
+<pre><code>- How efficiently the physics is represented
+
+- The Navier–Stokes equations provide the full physical truth.
+
+- POD helps compress that truth into a smaller, faster, and more useful engineering model.
+
+- That is the core philosophy of Reduced Order Modeling.
+</code></pre>
 
 
 
