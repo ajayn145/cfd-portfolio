@@ -5,7 +5,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Project 1:
+  - Project 1-Species Transport Solver:
       - Overview: project-1-Species_transport_solver/overview.md
       - Governing Equations: project-1-Species_transport_solver/governing-equations.md
       - Numerical Method: project-1-Species_transport_solver/numerical-method.md
@@ -15,7 +15,7 @@ nav:
       - Results: project-1-Species_transport_solver/results.md
       - Learnings: project-1-Species_transport_solver/learnings.md
       - Future Work: project-1-Species_transport_solver/future_work.md
-  - Project 2:
+  - Project 2-Species Transport Temperature and Buouancy Solver:
       - Summary: project-2-Species_transport_temperature_and_buouancy_solver/summary.md
       - Overview: project-2-Species_transport_temperature_and_buouancy_solver/overview.md
       - Vector Calculus: project-2-Species_transport_temperature_and_buouancy_solver/vector-calculus-basics.md
@@ -27,7 +27,7 @@ nav:
       - Results: project-2-Species_transport_temperature_and_buouancy_solver/results.md
       - Learnings: project-2-Species_transport_temperature_and_buouancy_solver/learnings.md
       - Future Work: project-2-Species_transport_temperature_and_buouancy_solver/future_work.md
-  - Project 3:
+  - Project 3-Vortex Dynamics:
       - Summary: project-3-vortex_dynamics/summary.md
       - Overview: project-3-vortex_dynamics/overview.md
       - Governing Equations: project-3-vortex_dynamics/governing-equations.md
