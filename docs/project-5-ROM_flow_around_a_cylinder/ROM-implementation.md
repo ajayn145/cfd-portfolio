@@ -1,208 +1,279 @@
-# Theoretical Insights — Reduced Order Modeling (ROM)
+# ROM Implementation
 
-## What is Reduced Order Modeling?
+## Introduction
 
-Reduced Order Modeling (ROM) is a technique used to simplify high-dimensional systems (like CFD simulations) into a much lower-dimensional representation while preserving the dominant physical behavior.
+The main objective of this project is not only to perform a CFD simulation of flow around a circular cylinder, but also to develop a Reduced Order Model (ROM) using Proper Orthogonal Decomposition (POD).
 
-Instead of solving the governing equations at every grid point, ROM approximates the system using a small number of basis functions (modes).
+A full CFD simulation contains thousands of spatial degrees of freedom and requires significant computational cost. ROM helps reduce this complexity by identifying the dominant coherent structures of the flow and representing the system using only a few energetic modes.
 
----
+The complete workflow followed in this project is:
 
-## Full Order Model vs Reduced Order Model
+CFD Simulation → Snapshot Generation → POD → Mode Extraction → Temporal Analysis → Physical Interpretation
 
-### Full Order Model (FOM)
-- Solves Navier–Stokes equations on all grid points
-- High accuracy
-- Very expensive computationally
-- Degrees of freedom (DOF): ~10³–10⁷+
-
-### Reduced Order Model (ROM)
-- Represents solution using a few modes
-- Much faster computation
-- Slight loss of accuracy (controlled)
-- Degrees of freedom: ~2–50
+This creates a full CFD-to-ROM pipeline.
 
 ---
 
-## Core Idea of ROM
+## Step 1 — Full Order Model (FOM)
 
-A flow field:
+The first step is solving the full incompressible Navier–Stokes equations using Basilisk.
 
-u(x, y, t)
+The following Basilisk modules were used:
 
-is approximated as:
+- navier-stokes/centered.h
+- embed.h
 
-u(x, y, t) ≈ Σ [ a_i(t) · φ_i(x, y) ]
+The centered solver was used for pressure–velocity coupling and the embedded boundary method was used to represent the circular cylinder inside a Cartesian mesh.
 
-Where:
-- φ_i(x, y) → spatial modes (basis functions)
-- a_i(t) → temporal coefficients
-- i = 1 to r, where r << N
+The simulation was performed for:
 
----
+- Reynolds number: Re = 100
+- 2D incompressible laminar flow
+- Uniform inlet velocity
+- Circular cylinder with no-slip wall boundary
 
-## Proper Orthogonal Decomposition (POD)
+This full CFD simulation is called the:
 
-POD is the most widely used method for ROM in fluid mechanics.
+Full Order Model (FOM)
 
-### Objective:
-Find an optimal set of orthogonal basis functions that capture maximum energy (variance) of the system.
-
----
-
-## Snapshot Method
-
-Instead of solving eigenvalue problems directly, POD uses simulation data:
-
-1. Run CFD simulation  
-2. Collect snapshots at different time steps  
-3. Construct snapshot matrix:
-
-X = [x₁ x₂ x₃ ... xₙ]
-
-Where each column is a flow field
+because it contains the complete physical system.
 
 ---
 
-## Singular Value Decomposition (SVD)
+## Step 2 — Domain and Geometry Setup
 
-The snapshot matrix is decomposed as:
+The computational domain was created using:
 
-X = U Σ Vᵀ
+		size (L0);
+		origin (-2.0, -4.0);
 
-Where:
-- U → spatial modes
-- Σ → singular values (energy content)
-- Vᵀ → temporal coefficients
+This creates:
+ - sufficiently large wake region
+ - upstream inlet region
+ - downstream outlet development zone
 
----
+The cylinder geometry was created using:
 
-## Energy Content of Modes
+		solid(cs, fs, sq(x) + sq(y) - sq(RADIUS));
 
-Energy captured by each mode:
+where:
+		cs = cell fraction
+		fs = face fraction
 
-E_i = σ_i² / Σ(σ_j²)
-
-Modes are ranked:
-
-Mode 1 > Mode 2 > Mode 3 > ...
-
----
-
-## Mode Truncation
-
-Instead of using all modes:
-
-- Keep only first r modes
-- Discard low-energy modes
-
-This gives:
-
-X ≈ U_r Σ_r V_rᵀ
+This avoids complex body-fitted meshing and uses Basilisk’s embedded boundary method.
 
 ---
 
-## Physical Meaning of POD Modes
+## Step 3 — Boundary Conditions
 
-- Mode 1 → dominant flow structure (e.g., main vortex)
-- Mode 2+ → corrections / secondary features
-- Higher modes → noise or fine-scale structures
+The following boundary conditions were applied:
 
----
+		Inlet
+		u.n[left] = dirichlet(U0);
+		u.t[left] = dirichlet(0);
 
-## Temporal Coefficients
+This creates a uniform incoming free-stream velocity.
 
-a_i(t) represent how each mode evolves over time.
+		Cylinder Surface
+		u.n[embed] = dirichlet(0);
+		u.t[embed] = dirichlet(0);
 
-- Steady flow → coefficients become constant
-- Unsteady flow → coefficients oscillate
+This imposes the no-slip condition and generates:
+ - boundary layer formation
+ - flow separation
+ - wake development
 
----
+Outlet:-
+		p[right] = dirichlet(0);
 
-## Types of ROM
+This provides the pressure reference and allows flow to leave the domain naturally.
 
-### 1. Projection-Based ROM
-- Uses governing equations
-- Applies Galerkin projection
-- Physically interpretable
-
-### 2. Data-Driven ROM
-- Uses simulation or experimental data
-- No direct use of governing equations
-- Often combined with machine learning
 
 ---
 
-## Advantages of ROM
+## Step 4 — Symmetry Breaking Perturbation
 
-- Significant reduction in computation time
-- Enables real-time simulation
-- Useful for optimization and control
-- Easy integration with ML models
+Initially, the flow remained too symmetric and POD showed only one dominant steady mode.
 
----
+To trigger wake instability and vortex shedding, a small perturbation was introduced:
 
-## Limitations of ROM
+		u.y[] = 0.02*sin(2*pi*y/L0);
 
-- Accuracy depends on quality of snapshots
-- Cannot capture unseen physics
-- Poor performance for highly nonlinear/turbulent flows (if not trained properly)
-- Mode truncation introduces approximation error
+This creates a small vertical disturbance and helps break perfect symmetry.
+
+This step is extremely important because POD cannot detect oscillatory modes if the CFD simulation itself remains perfectly steady. This was one of the most important engineering lessons of the project.
 
 ---
 
-## When ROM Works Best
 
-- Systems with dominant coherent structures
-- Low to moderate Reynolds number flows
-- Flows with repeating patterns (periodic or quasi-steady)
+## Step 5 — Snapshot Generation
 
----
+The most important step for POD is generating transient velocity snapshots.
 
-## When ROM Struggles
+Snapshots were saved using:
 
-- Highly turbulent flows
-- Strongly chaotic systems
-- Flows with sudden changes (shock, separation onset)
+		event snapshot (t += 0.3)
 
----
+and only after initial transient development:
 
-## Connection to CFD
+		if (t >= 2)
 
-CFD provides:
+This avoids collecting startup noise and focuses on meaningful wake behavior.
 
-- High-fidelity data (snapshots)
+Each snapshot file stored:
 
-ROM provides:
+		x coordinate
+		y coordinate
+		x-velocity component (ux)
+		y-velocity component (uy)
 
-- Compressed representation of that data
-
-Together:
-
-CFD → Data → ROM → Fast prediction
+A total of 73 snapshot files were generated for POD analysis. This created the dataset for Reduced Order Modeling.
 
 ---
 
-## Key Insight
 
-ROM does not "solve" the physics again.
+## Step 6 — Python POD Preprocessing
 
-Instead, it learns:
+The snapshot files were processed using Python with:
 
-> "What are the most important patterns in the flow, and how do they evolve?"
+		NumPy
+		Matplotlib
+		SciPy
+
+Each file was read using:
+
+		data = np.loadtxt(file)
+
+The velocity field was extracted as:
+
+		ux = data[:, 2]
+		uy = data[:, 3]
+
+and combined as:
+
+		snapshot = np.concatenate([ux, uy])
+
+This creates one full-state vector for each time step.
 
 ---
 
-## Summary
 
-- ROM reduces system dimensionality
-- POD extracts dominant flow structures
-- SVD provides mathematical decomposition
-- Only a few modes are needed to represent complex flows
-- Enables fast and efficient simulation
+## Step 7 — Handling Variable Snapshot Size
+
+Because embedded boundary simulations may produce slightly different active cell counts, snapshot sizes were not always identical. This caused:
+
+		ValueError: setting an array element with a sequence
+
+To fix this, all snapshots were trimmed to the minimum common size:
+
+		min_points = min(len(data))
+		data = data[:min_points, :]
+
+This is a practical ROM preprocessing step and reflects real engineering workflow rather than ideal textbook examples.
+
+Final POD matrix size became (32768, 73)
+where:
+		rows = spatial degrees of freedom
+		columns = number of snapshots
+
 
 ---
 
-## Final Takeaway
 
-A complex CFD solution with thousands of variables can often be represented using just a few dominant modes without significant loss of accuracy.
+## Step 8 — POD Using Singular Value Decomposition
+
+The snapshot matrix was written as:
+
+		X = [x1 x2 x3 ... xn]
+
+where each column is one velocity field snapshot.
+
+Singular Value Decomposition was then applied:
+
+		U, S, VT = np.linalg.svd(X, full_matrices=False)
+
+which gives:
+
+		X = UΣVᵀ
+
+where:
+		U = spatial POD modes
+		Σ = singular values
+		Vᵀ = temporal coefficients
+
+This is the mathematical core of the ROM process.
+
+---
+
+## Step 9 — Modal Energy Analysis
+
+The energy contribution of each mode was computed using:
+
+		energy = S**2 / np.sum(S**2)
+
+This helps answer: "Which flow structures are most important?"
+
+The final result showed:
+
+		Mode 1 captured more than 99% of total energy
+		higher modes were very weak
+
+This indicates that Mean flow dominated over oscillatory vortex shedding. This is a physically meaningful ROM conclusion.
+
+
+---
+
+
+## Step 10 — Temporal Coefficient Analysis
+
+The temporal coefficients were computed using:
+
+		A = np.diag(S) @ VT
+
+These coefficients show how each POD mode evolves with time.
+
+For classical vortex shedding cases, one expects:
+		 - sinusoidal temporal behavior
+		 - paired POD modes
+		 - oscillatory wake structures
+
+In this project:
+		Mode 1 remained strongly dominant
+		higher modes showed weak fluctuations
+
+This confirmed that the flow was largely steady-dominant.
+
+---
+
+
+## Step 11 — Frequency Analysis (FFT)
+
+To identify dominant oscillation frequency, Fast Fourier Transform (FFT) was applied:
+
+		fft_vals = np.abs(fft(signal))
+
+This helps estimate:
+ - dominant shedding frequency
+ - Strouhal number
+
+Although strong oscillatory shedding was not dominant in this setup, the workflow for frequency extraction was successfully established. This is important for future higher-Reynolds-number studies.
+
+---
+
+## Final ROM Interpretation
+
+The complete workflow proved:
+
+			CFD → Data → Physics Compression
+
+Instead of repeatedly solving the full Navier–Stokes equations, the system can now be represented using:
+		
+		    Few dominant modes + temporal coefficients
+
+This is the core philosophy of Reduced Order Modeling. The most important learning was that ROM quality depends directly on CFD quality. If the CFD simulation does not contain strong transient physics, POD will naturally produce dominant steady modes. This project successfully established a practical and industry-relevant ROM workflow using Basilisk and Python.
+
+
+
+
+
+init_grid (1 << 7);
