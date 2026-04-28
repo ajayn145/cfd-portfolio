@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#theoretical-insights-reduced-order-modeling-rom" class="md-skip">
+        <a href="#rom-implementation" class="md-skip">
           Skip to content
         </a>
       
@@ -1890,10 +1890,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-reduced-order-modeling" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Reduced Order Modeling?
+        Introduction
       
     </span>
   </a>
@@ -1901,49 +1901,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#full-order-model-vs-reduced-order-model" class="md-nav__link">
+  <a href="#step-1-full-order-model-fom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Full Order Model vs Reduced Order Model
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Full Order Model vs Reduced Order Model">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#full-order-model-fom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Full Order Model (FOM)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduced-order-model-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reduced Order Model (ROM)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-idea-of-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Idea of ROM
+        Step 1 — Full Order Model (FOM)
       
     </span>
   </a>
@@ -1951,38 +1912,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proper-orthogonal-decomposition-pod" class="md-nav__link">
+  <a href="#step-2-domain-and-geometry-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Proper Orthogonal Decomposition (POD)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proper Orthogonal Decomposition (POD)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snapshot-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Snapshot Method
+        Step 2 — Domain and Geometry Setup
       
     </span>
   </a>
@@ -1990,10 +1923,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#singular-value-decomposition-svd" class="md-nav__link">
+  <a href="#step-3-boundary-conditions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Singular Value Decomposition (SVD)
+        Step 3 — Boundary Conditions
       
     </span>
   </a>
@@ -2001,10 +1934,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#energy-content-of-modes" class="md-nav__link">
+  <a href="#step-4-symmetry-breaking-perturbation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Energy Content of Modes
+        Step 4 — Symmetry Breaking Perturbation
       
     </span>
   </a>
@@ -2012,10 +1945,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-truncation" class="md-nav__link">
+  <a href="#step-5-snapshot-generation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mode Truncation
+        Step 5 — Snapshot Generation
       
     </span>
   </a>
@@ -2023,10 +1956,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#physical-meaning-of-pod-modes" class="md-nav__link">
+  <a href="#step-6-python-pod-preprocessing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical Meaning of POD Modes
+        Step 6 — Python POD Preprocessing
       
     </span>
   </a>
@@ -2034,10 +1967,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#temporal-coefficients" class="md-nav__link">
+  <a href="#step-7-handling-variable-snapshot-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Temporal Coefficients
+        Step 7 — Handling Variable Snapshot Size
       
     </span>
   </a>
@@ -2045,49 +1978,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-rom" class="md-nav__link">
+  <a href="#step-8-pod-using-singular-value-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Types of ROM
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of ROM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-projection-based-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Projection-Based ROM
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-data-driven-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Data-Driven ROM
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advantages-of-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advantages of ROM
+        Step 8 — POD Using Singular Value Decomposition
       
     </span>
   </a>
@@ -2095,10 +1989,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations-of-rom" class="md-nav__link">
+  <a href="#step-9-modal-energy-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations of ROM
+        Step 9 — Modal Energy Analysis
       
     </span>
   </a>
@@ -2106,10 +2000,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-rom-works-best" class="md-nav__link">
+  <a href="#step-10-temporal-coefficient-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When ROM Works Best
+        Step 10 — Temporal Coefficient Analysis
       
     </span>
   </a>
@@ -2117,10 +2011,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-rom-struggles" class="md-nav__link">
+  <a href="#step-11-frequency-analysis-fft" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When ROM Struggles
+        Step 11 — Frequency Analysis (FFT)
       
     </span>
   </a>
@@ -2128,43 +2022,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connection-to-cfd" class="md-nav__link">
+  <a href="#final-rom-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connection to CFD
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Insight
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Final Takeaway
+        Final ROM Interpretation
       
     </span>
   </a>
@@ -2270,10 +2131,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-reduced-order-modeling" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Reduced Order Modeling?
+        Introduction
       
     </span>
   </a>
@@ -2281,49 +2142,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#full-order-model-vs-reduced-order-model" class="md-nav__link">
+  <a href="#step-1-full-order-model-fom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Full Order Model vs Reduced Order Model
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Full Order Model vs Reduced Order Model">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#full-order-model-fom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Full Order Model (FOM)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduced-order-model-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reduced Order Model (ROM)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-idea-of-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core Idea of ROM
+        Step 1 — Full Order Model (FOM)
       
     </span>
   </a>
@@ -2331,38 +2153,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proper-orthogonal-decomposition-pod" class="md-nav__link">
+  <a href="#step-2-domain-and-geometry-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Proper Orthogonal Decomposition (POD)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Proper Orthogonal Decomposition (POD)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objective:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snapshot-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Snapshot Method
+        Step 2 — Domain and Geometry Setup
       
     </span>
   </a>
@@ -2370,10 +2164,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#singular-value-decomposition-svd" class="md-nav__link">
+  <a href="#step-3-boundary-conditions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Singular Value Decomposition (SVD)
+        Step 3 — Boundary Conditions
       
     </span>
   </a>
@@ -2381,10 +2175,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#energy-content-of-modes" class="md-nav__link">
+  <a href="#step-4-symmetry-breaking-perturbation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Energy Content of Modes
+        Step 4 — Symmetry Breaking Perturbation
       
     </span>
   </a>
@@ -2392,10 +2186,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-truncation" class="md-nav__link">
+  <a href="#step-5-snapshot-generation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mode Truncation
+        Step 5 — Snapshot Generation
       
     </span>
   </a>
@@ -2403,10 +2197,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#physical-meaning-of-pod-modes" class="md-nav__link">
+  <a href="#step-6-python-pod-preprocessing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical Meaning of POD Modes
+        Step 6 — Python POD Preprocessing
       
     </span>
   </a>
@@ -2414,10 +2208,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#temporal-coefficients" class="md-nav__link">
+  <a href="#step-7-handling-variable-snapshot-size" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Temporal Coefficients
+        Step 7 — Handling Variable Snapshot Size
       
     </span>
   </a>
@@ -2425,49 +2219,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-rom" class="md-nav__link">
+  <a href="#step-8-pod-using-singular-value-decomposition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Types of ROM
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of ROM">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-projection-based-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Projection-Based ROM
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-data-driven-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Data-Driven ROM
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advantages-of-rom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advantages of ROM
+        Step 8 — POD Using Singular Value Decomposition
       
     </span>
   </a>
@@ -2475,10 +2230,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations-of-rom" class="md-nav__link">
+  <a href="#step-9-modal-energy-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations of ROM
+        Step 9 — Modal Energy Analysis
       
     </span>
   </a>
@@ -2486,10 +2241,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-rom-works-best" class="md-nav__link">
+  <a href="#step-10-temporal-coefficient-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When ROM Works Best
+        Step 10 — Temporal Coefficient Analysis
       
     </span>
   </a>
@@ -2497,10 +2252,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-rom-struggles" class="md-nav__link">
+  <a href="#step-11-frequency-analysis-fft" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When ROM Struggles
+        Step 11 — Frequency Analysis (FFT)
       
     </span>
   </a>
@@ -2508,43 +2263,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connection-to-cfd" class="md-nav__link">
+  <a href="#final-rom-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connection to CFD
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-insight" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Insight
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Final Takeaway
+        Final ROM Interpretation
       
     </span>
   </a>
@@ -2568,163 +2290,186 @@
 
 
 
-<h1 id="theoretical-insights-reduced-order-modeling-rom">Theoretical Insights — Reduced Order Modeling (ROM)</h1>
-<h2 id="what-is-reduced-order-modeling">What is Reduced Order Modeling?</h2>
-<p>Reduced Order Modeling (ROM) is a technique used to simplify high-dimensional systems (like CFD simulations) into a much lower-dimensional representation while preserving the dominant physical behavior.</p>
-<p>Instead of solving the governing equations at every grid point, ROM approximates the system using a small number of basis functions (modes).</p>
+<h1 id="rom-implementation">ROM Implementation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The main objective of this project is not only to perform a CFD simulation of flow around a circular cylinder, but also to develop a Reduced Order Model (ROM) using Proper Orthogonal Decomposition (POD).</p>
+<p>A full CFD simulation contains thousands of spatial degrees of freedom and requires significant computational cost. ROM helps reduce this complexity by identifying the dominant coherent structures of the flow and representing the system using only a few energetic modes.</p>
+<p>The complete workflow followed in this project is:</p>
+<p>CFD Simulation → Snapshot Generation → POD → Mode Extraction → Temporal Analysis → Physical Interpretation</p>
+<p>This creates a full CFD-to-ROM pipeline.</p>
 <hr />
-<h2 id="full-order-model-vs-reduced-order-model">Full Order Model vs Reduced Order Model</h2>
-<h3 id="full-order-model-fom">Full Order Model (FOM)</h3>
+<h2 id="step-1-full-order-model-fom">Step 1 — Full Order Model (FOM)</h2>
+<p>The first step is solving the full incompressible Navier–Stokes equations using Basilisk.</p>
+<p>The following Basilisk modules were used:</p>
 <ul>
-<li>Solves Navier–Stokes equations on all grid points</li>
-<li>High accuracy</li>
-<li>Very expensive computationally</li>
-<li>Degrees of freedom (DOF): ~10³–10⁷+</li>
+<li>navier-stokes/centered.h</li>
+<li>embed.h</li>
 </ul>
-<h3 id="reduced-order-model-rom">Reduced Order Model (ROM)</h3>
+<p>The centered solver was used for pressure–velocity coupling and the embedded boundary method was used to represent the circular cylinder inside a Cartesian mesh.</p>
+<p>The simulation was performed for:</p>
 <ul>
-<li>Represents solution using a few modes</li>
-<li>Much faster computation</li>
-<li>Slight loss of accuracy (controlled)</li>
-<li>Degrees of freedom: ~2–50</li>
+<li>Reynolds number: Re = 100</li>
+<li>2D incompressible laminar flow</li>
+<li>Uniform inlet velocity</li>
+<li>Circular cylinder with no-slip wall boundary</li>
 </ul>
+<p>This full CFD simulation is called the:</p>
+<p>Full Order Model (FOM)</p>
+<p>because it contains the complete physical system.</p>
 <hr />
-<h2 id="core-idea-of-rom">Core Idea of ROM</h2>
-<p>A flow field:</p>
-<p>u(x, y, t)</p>
-<p>is approximated as:</p>
-<p>u(x, y, t) ≈ Σ [ a_i(t) · φ_i(x, y) ]</p>
-<p>Where:
-- φ_i(x, y) → spatial modes (basis functions)
-- a_i(t) → temporal coefficients
-- i = 1 to r, where r &lt;&lt; N</p>
+<h2 id="step-2-domain-and-geometry-setup">Step 2 — Domain and Geometry Setup</h2>
+<p>The computational domain was created using:</p>
+<pre><code>    size (L0);
+    origin (-2.0, -4.0);
+</code></pre>
+<p>This creates:
+ - sufficiently large wake region
+ - upstream inlet region
+ - downstream outlet development zone</p>
+<p>The cylinder geometry was created using:</p>
+<pre><code>    solid(cs, fs, sq(x) + sq(y) - sq(RADIUS));
+</code></pre>
+<p>where:
+        cs = cell fraction
+        fs = face fraction</p>
+<p>This avoids complex body-fitted meshing and uses Basilisk’s embedded boundary method.</p>
 <hr />
-<h2 id="proper-orthogonal-decomposition-pod">Proper Orthogonal Decomposition (POD)</h2>
-<p>POD is the most widely used method for ROM in fluid mechanics.</p>
-<h3 id="objective">Objective:</h3>
-<p>Find an optimal set of orthogonal basis functions that capture maximum energy (variance) of the system.</p>
+<h2 id="step-3-boundary-conditions">Step 3 — Boundary Conditions</h2>
+<p>The following boundary conditions were applied:</p>
+<pre><code>    Inlet
+    u.n[left] = dirichlet(U0);
+    u.t[left] = dirichlet(0);
+</code></pre>
+<p>This creates a uniform incoming free-stream velocity.</p>
+<pre><code>    Cylinder Surface
+    u.n[embed] = dirichlet(0);
+    u.t[embed] = dirichlet(0);
+</code></pre>
+<p>This imposes the no-slip condition and generates:
+ - boundary layer formation
+ - flow separation
+ - wake development</p>
+<p>Outlet:-
+        p[right] = dirichlet(0);</p>
+<p>This provides the pressure reference and allows flow to leave the domain naturally.</p>
 <hr />
-<h2 id="snapshot-method">Snapshot Method</h2>
-<p>Instead of solving eigenvalue problems directly, POD uses simulation data:</p>
-<ol>
-<li>Run CFD simulation  </li>
-<li>Collect snapshots at different time steps  </li>
-<li>Construct snapshot matrix:</li>
-</ol>
-<p>X = [x₁ x₂ x₃ ... xₙ]</p>
-<p>Where each column is a flow field</p>
+<h2 id="step-4-symmetry-breaking-perturbation">Step 4 — Symmetry Breaking Perturbation</h2>
+<p>Initially, the flow remained too symmetric and POD showed only one dominant steady mode.</p>
+<p>To trigger wake instability and vortex shedding, a small perturbation was introduced:</p>
+<pre><code>    u.y[] = 0.02*sin(2*pi*y/L0);
+</code></pre>
+<p>This creates a small vertical disturbance and helps break perfect symmetry.</p>
+<p>This step is extremely important because POD cannot detect oscillatory modes if the CFD simulation itself remains perfectly steady. This was one of the most important engineering lessons of the project.</p>
 <hr />
-<h2 id="singular-value-decomposition-svd">Singular Value Decomposition (SVD)</h2>
-<p>The snapshot matrix is decomposed as:</p>
-<p>X = U Σ Vᵀ</p>
-<p>Where:
-- U → spatial modes
-- Σ → singular values (energy content)
-- Vᵀ → temporal coefficients</p>
+<h2 id="step-5-snapshot-generation">Step 5 — Snapshot Generation</h2>
+<p>The most important step for POD is generating transient velocity snapshots.</p>
+<p>Snapshots were saved using:</p>
+<pre><code>    event snapshot (t += 0.3)
+</code></pre>
+<p>and only after initial transient development:</p>
+<pre><code>    if (t &gt;= 2)
+</code></pre>
+<p>This avoids collecting startup noise and focuses on meaningful wake behavior.</p>
+<p>Each snapshot file stored:</p>
+<pre><code>    x coordinate
+    y coordinate
+    x-velocity component (ux)
+    y-velocity component (uy)
+</code></pre>
+<p>A total of 73 snapshot files were generated for POD analysis. This created the dataset for Reduced Order Modeling.</p>
 <hr />
-<h2 id="energy-content-of-modes">Energy Content of Modes</h2>
-<p>Energy captured by each mode:</p>
-<p>E_i = σ_i² / Σ(σ_j²)</p>
-<p>Modes are ranked:</p>
-<p>Mode 1 &gt; Mode 2 &gt; Mode 3 &gt; ...</p>
+<h2 id="step-6-python-pod-preprocessing">Step 6 — Python POD Preprocessing</h2>
+<p>The snapshot files were processed using Python with:</p>
+<pre><code>    NumPy
+    Matplotlib
+    SciPy
+</code></pre>
+<p>Each file was read using:</p>
+<pre><code>    data = np.loadtxt(file)
+</code></pre>
+<p>The velocity field was extracted as:</p>
+<pre><code>    ux = data[:, 2]
+    uy = data[:, 3]
+</code></pre>
+<p>and combined as:</p>
+<pre><code>    snapshot = np.concatenate([ux, uy])
+</code></pre>
+<p>This creates one full-state vector for each time step.</p>
 <hr />
-<h2 id="mode-truncation">Mode Truncation</h2>
-<p>Instead of using all modes:</p>
-<ul>
-<li>Keep only first r modes</li>
-<li>Discard low-energy modes</li>
-</ul>
-<p>This gives:</p>
-<p>X ≈ U_r Σ_r V_rᵀ</p>
+<h2 id="step-7-handling-variable-snapshot-size">Step 7 — Handling Variable Snapshot Size</h2>
+<p>Because embedded boundary simulations may produce slightly different active cell counts, snapshot sizes were not always identical. This caused:</p>
+<pre><code>    ValueError: setting an array element with a sequence
+</code></pre>
+<p>To fix this, all snapshots were trimmed to the minimum common size:</p>
+<pre><code>    min_points = min(len(data))
+    data = data[:min_points, :]
+</code></pre>
+<p>This is a practical ROM preprocessing step and reflects real engineering workflow rather than ideal textbook examples.</p>
+<p>Final POD matrix size became (32768, 73)
+where:
+        rows = spatial degrees of freedom
+        columns = number of snapshots</p>
 <hr />
-<h2 id="physical-meaning-of-pod-modes">Physical Meaning of POD Modes</h2>
-<ul>
-<li>Mode 1 → dominant flow structure (e.g., main vortex)</li>
-<li>Mode 2+ → corrections / secondary features</li>
-<li>Higher modes → noise or fine-scale structures</li>
-</ul>
+<h2 id="step-8-pod-using-singular-value-decomposition">Step 8 — POD Using Singular Value Decomposition</h2>
+<p>The snapshot matrix was written as:</p>
+<pre><code>    X = [x1 x2 x3 ... xn]
+</code></pre>
+<p>where each column is one velocity field snapshot.</p>
+<p>Singular Value Decomposition was then applied:</p>
+<pre><code>    U, S, VT = np.linalg.svd(X, full_matrices=False)
+</code></pre>
+<p>which gives:</p>
+<pre><code>    X = UΣVᵀ
+</code></pre>
+<p>where:
+        U = spatial POD modes
+        Σ = singular values
+        Vᵀ = temporal coefficients</p>
+<p>This is the mathematical core of the ROM process.</p>
 <hr />
-<h2 id="temporal-coefficients">Temporal Coefficients</h2>
-<p>a_i(t) represent how each mode evolves over time.</p>
-<ul>
-<li>Steady flow → coefficients become constant</li>
-<li>Unsteady flow → coefficients oscillate</li>
-</ul>
+<h2 id="step-9-modal-energy-analysis">Step 9 — Modal Energy Analysis</h2>
+<p>The energy contribution of each mode was computed using:</p>
+<pre><code>    energy = S**2 / np.sum(S**2)
+</code></pre>
+<p>This helps answer: "Which flow structures are most important?"</p>
+<p>The final result showed:</p>
+<pre><code>    Mode 1 captured more than 99% of total energy
+    higher modes were very weak
+</code></pre>
+<p>This indicates that Mean flow dominated over oscillatory vortex shedding. This is a physically meaningful ROM conclusion.</p>
 <hr />
-<h2 id="types-of-rom">Types of ROM</h2>
-<h3 id="1-projection-based-rom">1. Projection-Based ROM</h3>
-<ul>
-<li>Uses governing equations</li>
-<li>Applies Galerkin projection</li>
-<li>Physically interpretable</li>
-</ul>
-<h3 id="2-data-driven-rom">2. Data-Driven ROM</h3>
-<ul>
-<li>Uses simulation or experimental data</li>
-<li>No direct use of governing equations</li>
-<li>Often combined with machine learning</li>
-</ul>
+<h2 id="step-10-temporal-coefficient-analysis">Step 10 — Temporal Coefficient Analysis</h2>
+<p>The temporal coefficients were computed using:</p>
+<pre><code>    A = np.diag(S) @ VT
+</code></pre>
+<p>These coefficients show how each POD mode evolves with time.</p>
+<p>For classical vortex shedding cases, one expects:
+         - sinusoidal temporal behavior
+         - paired POD modes
+         - oscillatory wake structures</p>
+<p>In this project:
+        Mode 1 remained strongly dominant
+        higher modes showed weak fluctuations</p>
+<p>This confirmed that the flow was largely steady-dominant.</p>
 <hr />
-<h2 id="advantages-of-rom">Advantages of ROM</h2>
-<ul>
-<li>Significant reduction in computation time</li>
-<li>Enables real-time simulation</li>
-<li>Useful for optimization and control</li>
-<li>Easy integration with ML models</li>
-</ul>
+<h2 id="step-11-frequency-analysis-fft">Step 11 — Frequency Analysis (FFT)</h2>
+<p>To identify dominant oscillation frequency, Fast Fourier Transform (FFT) was applied:</p>
+<pre><code>    fft_vals = np.abs(fft(signal))
+</code></pre>
+<p>This helps estimate:
+ - dominant shedding frequency
+ - Strouhal number</p>
+<p>Although strong oscillatory shedding was not dominant in this setup, the workflow for frequency extraction was successfully established. This is important for future higher-Reynolds-number studies.</p>
 <hr />
-<h2 id="limitations-of-rom">Limitations of ROM</h2>
-<ul>
-<li>Accuracy depends on quality of snapshots</li>
-<li>Cannot capture unseen physics</li>
-<li>Poor performance for highly nonlinear/turbulent flows (if not trained properly)</li>
-<li>Mode truncation introduces approximation error</li>
-</ul>
-<hr />
-<h2 id="when-rom-works-best">When ROM Works Best</h2>
-<ul>
-<li>Systems with dominant coherent structures</li>
-<li>Low to moderate Reynolds number flows</li>
-<li>Flows with repeating patterns (periodic or quasi-steady)</li>
-</ul>
-<hr />
-<h2 id="when-rom-struggles">When ROM Struggles</h2>
-<ul>
-<li>Highly turbulent flows</li>
-<li>Strongly chaotic systems</li>
-<li>Flows with sudden changes (shock, separation onset)</li>
-</ul>
-<hr />
-<h2 id="connection-to-cfd">Connection to CFD</h2>
-<p>CFD provides:</p>
-<ul>
-<li>High-fidelity data (snapshots)</li>
-</ul>
-<p>ROM provides:</p>
-<ul>
-<li>Compressed representation of that data</li>
-</ul>
-<p>Together:</p>
-<p>CFD → Data → ROM → Fast prediction</p>
-<hr />
-<h2 id="key-insight">Key Insight</h2>
-<p>ROM does not "solve" the physics again.</p>
-<p>Instead, it learns:</p>
-<blockquote>
-<p>"What are the most important patterns in the flow, and how do they evolve?"</p>
-</blockquote>
-<hr />
-<h2 id="summary">Summary</h2>
-<ul>
-<li>ROM reduces system dimensionality</li>
-<li>POD extracts dominant flow structures</li>
-<li>SVD provides mathematical decomposition</li>
-<li>Only a few modes are needed to represent complex flows</li>
-<li>Enables fast and efficient simulation</li>
-</ul>
-<hr />
-<h2 id="final-takeaway">Final Takeaway</h2>
-<p>A complex CFD solution with thousands of variables can often be represented using just a few dominant modes without significant loss of accuracy.</p>
+<h2 id="final-rom-interpretation">Final ROM Interpretation</h2>
+<p>The complete workflow proved:</p>
+<pre><code>        CFD → Data → Physics Compression
+</code></pre>
+<p>Instead of repeatedly solving the full Navier–Stokes equations, the system can now be represented using:</p>
+<pre><code>        Few dominant modes + temporal coefficients
+</code></pre>
+<p>This is the core philosophy of Reduced Order Modeling. The most important learning was that ROM quality depends directly on CFD quality. If the CFD simulation does not contain strong transient physics, POD will naturally produce dominant steady modes. This project successfully established a practical and industry-relevant ROM workflow using Basilisk and Python.</p>
+<p>init_grid (1 &lt;&lt; 7);</p>
 
 
 
