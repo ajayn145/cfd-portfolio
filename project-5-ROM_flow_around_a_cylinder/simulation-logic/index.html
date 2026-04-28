@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flowchart-cavityc-logic" class="md-skip">
+        <a href="#simulation-logic" class="md-skip">
           Skip to content
         </a>
       
@@ -1864,6 +1864,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1906,6 +1908,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1914,10 +1918,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-cavityc-logic" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Flowchart — cavity.c Logic
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-define-the-physical-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Define the Physical Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-computational-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Create the Computational Domain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-cylinder-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Create Cylinder Geometry
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-apply-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Apply Boundary Conditions
       
     </span>
   </a>
@@ -1985,6 +2044,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1993,10 +2054,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#flowchart-cavityc-logic" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Flowchart — cavity.c Logic
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-define-the-physical-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Define the Physical Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-computational-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Create the Computational Domain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-cylinder-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Create Cylinder Geometry
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-apply-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Apply Boundary Conditions
       
     </span>
   </a>
@@ -2020,28 +2136,224 @@
 
 
 
-  <h1>Simualtion Logic</h1>
+<h1 id="simulation-logic">Simulation Logic</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The purpose of this project is not only to run a CFD simulation, but to create a complete Reduced Order Modeling (ROM) workflow for flow around a circular cylinder.</p>
+<p>To achieve this, the simulation follows a logical sequence where:</p>
+<p>CFD Solution → Snapshot Generation → POD → Reduced Order Interpretation</p>
+<p>Each stage depends on the previous one.</p>
+<p>This document explains the complete simulation logic behind the Basilisk code (<code>cylinder.c</code>) and the POD post-processing script (<code>pod_cylinder.py</code>).</p>
+<p>Understanding this logic is important because ROM is not just a Python script—it starts from how the CFD simulation itself is designed.</p>
+<hr />
+<h2 id="high-level-workflow">High-Level Workflow</h2>
+<pre><code>                The overall project logic follows:
 
-<h2 id="flowchart-cavityc-logic">Flowchart — cavity.c Logic</h2>
-<ol>
-<li>Initialize simulation domain and grid</li>
-<li>Apply boundary conditions (moving lid + no-slip walls)</li>
-<li>Initialize velocity field to zero</li>
-<li>Start time-stepping loop:</li>
-<li>Update viscosity field</li>
-<li>Solve Navier–Stokes equations</li>
-<li>Export snapshots at fixed time intervals</li>
-<li>Advance time</li>
-<li>Repeat until final time is reached</li>
-<li>End simulation</li>
-</ol>
+                ```text
+                Define Physical Problem
+                    ↓
+                Create Computational Domain
+                    ↓
+                Apply Boundary Conditions
+                    ↓
+                Represent Cylinder Geometry
+                    ↓
+                Solve Navier–Stokes Equations
+                    ↓
+                Generate Time Snapshots
+                    ↓
+                Store Velocity Fields
+                    ↓
+                Build Snapshot Matrix
+                    ↓
+                Apply POD (SVD)
+                    ↓
+                Extract Dominant Modes
+                    ↓
+                Analyze Temporal Behavior
+                    ↓
+                Interpret Physics
+</code></pre>
+<p>This is the complete ROM pipeline.</p>
 <hr />
-<p>Simualtion Logic in Basilisk
-<img alt="cavity_code" src="../figures/cavity_code.png" /></p>
+<h2 id="step-1-define-the-physical-problem">Step 1 — Define the Physical Problem</h2>
+<p>The first step is selecting the engineering problem:</p>
+<p>2D incompressible laminar flow around a circular cylinder at:</p>
+<pre><code>        Re = 100
+</code></pre>
+<p>This case is chosen because it contains:
+         - boundary layer development
+         - flow separation
+         - wake formation
+         - transient flow structures
+         - vortex shedding tendency</p>
+<p>It is simple enough to solve and complex enough for meaningful POD analysis.</p>
 <hr />
-<p>Post processing using POD (Proper Orthogonal Decomposition)
-<img alt="pom_1" src="../figures/pod_rom_1.png" />
-<img alt="pom_2" src="../figures/pod_rom_2.png" /></p>
+<h2 id="step-2-create-the-computational-domain">Step 2 — Create the Computational Domain</h2>
+<p>The simulation domain must be large enough so that:</p>
+<pre><code>     - inlet flow develops naturally
+     - wake forms properly
+     - outlet does not artificially affect the solution
+</code></pre>
+<p>The domain is created using:</p>
+<pre><code>        size (L0);
+        origin (-2.0, -4.0);
+        init_grid (1 &lt;&lt; 7);
+</code></pre>
+<p>This gives:
+         - upstream inlet region
+         - downstream wake region
+         - vertical spacing for wake development</p>
+<p>A poor domain size would destroy the ROM quality later.</p>
+<hr />
+<h2 id="step-3-create-cylinder-geometry">Step 3 — Create Cylinder Geometry</h2>
+<p>Instead of using body-fitted mesh generation, Basilisk uses:</p>
+<pre><code>            embed.h
+</code></pre>
+<p>with:
+        solid(cs, fs, sq(x) + sq(y) - sq(RADIUS));</p>
+<p>This creates:
+             - circular embedded cylinder
+             - no complex meshing
+             - Cartesian adaptive mesh</p>
+<p>This simplifies geometry handling significantly.</p>
+<p>The cylinder becomes the source of:
+             - flow blockage
+             - pressure buildup
+             - boundary layer separation
+             - wake generation</p>
+<p>which creates the physics POD will later analyze.</p>
+<h2 id="step-4-apply-boundary-conditions">Step 4 — Apply Boundary Conditions</h2>
+<p>Boundary conditions define how the fluid enters, interacts, and exits.</p>
+<h1 id="inlet">Inlet</h1>
+<p>Uniform velocity enters:</p>
+<pre><code>    u.n[left] = dirichlet(U0);
+    u.t[left] = dirichlet(0);
+</code></pre>
+<p>This creates the free-stream flow.</p>
+<h1 id="cylinder-wall">Cylinder Wall</h1>
+<p>No-slip condition:
+        u.n[embed] = dirichlet(0);
+        u.t[embed] = dirichlet(0);</p>
+<p>This creates:
+         - wall friction
+         - separation
+         - wake</p>
+<p>This is the most important physical source of the project.</p>
+<h1 id="outlet">Outlet</h1>
+<p>Pressure reference:
+        p[right] = dirichlet(0);</p>
+<p>This prevents pressure singularity and allows stable outflow. Without this, the solver may not advance.</p>
+<hr />
+<h2 id="step-5-break-perfect-symmetry">Step 5 — Break Perfect Symmetry</h2>
+<p>Initially, the simulation produced:</p>
+<pre><code>     - almost steady flow
+     - one dominant POD mode
+</code></pre>
+<p>because the flow remained too symmetric.</p>
+<p>To trigger unsteady wake behavior, manual perturbations were introduced as shown below</p>
+<pre><code>    u.y[] = 0.02*sin(2*pi*y/L0);
+</code></pre>
+<p>This creates small controlled perturbation, which helps trigger wake instability, vortex formation, oscillatory structures
+Without perturbation, POD cannot extract vortex shedding because the CFD itself contains no strong oscillation. This is a major engineering lesson.</p>
+<hr />
+<h2 id="step-6-solve-the-full-order-model-fom">Step 6 — Solve the Full Order Model (FOM)</h2>
+<p>Basilisk solves Incompressible Navier–Stokes Equations using:</p>
+<pre><code>    #include "navier-stokes/centered.h"
+</code></pre>
+<p>The solver advances in ime step by time step while enforcing:</p>
+<pre><code>        ∇ · u = 0
+</code></pre>
+<p>through pressure correction. This is where pressure solver convergence, CFL stability, transient evolution
+become important. This full simulation is called the Full Order Model (FOM) because it contains the complete physics.</p>
+<hr />
+<h2 id="step-7-generate-snapshots">Step 7 — Generate Snapshots</h2>
+<p>ROM requires time-resolved velocity data. This is done using:</p>
+<pre><code>    event snapshot (t += 0.3)
+</code></pre>
+<p>which saves the velocity field periodically. To avoid startup noise:</p>
+<pre><code>        if (t &gt;= 2)
+</code></pre>
+<p>is used.This means only physically meaningful flow is saved instead of unstable initial transients.</p>
+<p>Each file stores:
+         - x
+         - y
+         - ux
+         - uy</p>
+<p>These files become the input for POD. Without good snapshots, ROM becomes useless. No matter how good the Python script is.</p>
+<hr />
+<h2 id="step-8-build-pod-matrix">Step 8 — Build POD Matrix</h2>
+<p>The Python script reads all snapshot files:</p>
+<pre><code>    data = np.loadtxt(file)
+</code></pre>
+<p>and extracts:</p>
+<pre><code>     - ux = data[:, 2]
+     - uy = data[:, 3]
+</code></pre>
+<p>Then combines them:</p>
+<pre><code>snapshot = np.concatenate([ux, uy])
+</code></pre>
+<p>Each snapshot becomes one full-state vector These are stacked into:</p>
+<pre><code>    X = [x1 x2 x3 ... xn]
+</code></pre>
+<p>called the Snapshot Matrix. This is the mathematical input for POD.</p>
+<hr />
+<h2 id="step-9-handle-variable-snapshot-size">Step 9 — Handle Variable Snapshot Size</h2>
+<p>Because embedded boundaries create varying active cells. Not all snapshots had equal length. This caused:</p>
+<pre><code>    ValueError: setting an array element with a sequence
+</code></pre>
+<p>To fix this all files were trimmed to the minimum common size. This is a very practical ROM preprocessing step and reflects real engineering work.</p>
+<hr />
+<h2 id="step-10-apply-pod-using-svd">Step 10 — Apply POD Using SVD</h2>
+<p>POD is performed using:</p>
+<pre><code>    U, S, VT = np.linalg.svd(X, full_matrices=False)
+</code></pre>
+<p>This gives:</p>
+<pre><code>    X = UΣVᵀ
+</code></pre>
+<p>where:</p>
+<pre><code>    U = spatial modes
+    Σ = singular values
+    Vᵀ = temporal coefficients
+</code></pre>
+<p>This step answers:"What structures dominate the flow?". Instead of just visualizing velocity contours. This is where CFD becomes data-driven engineering.</p>
+<hr />
+<h2 id="step-11-analyze-modal-energy">Step 11 — Analyze Modal Energy</h2>
+<p>Using:</p>
+<pre><code>    energy = S**2 / np.sum(S**2)
+</code></pre>
+<p>we compute:"how much energy each mode carries". This tells us whether the flow is steady dominated or oscillation dominated. In this project Mode 1 captured almost all energy which means mean wake structure dominated. This is a physically meaningful result.</p>
+<hr />
+<h2 id="step-12-analyze-temporal-behavior">Step 12 — Analyze Temporal Behavior</h2>
+<p>Temporal coefficients are computed using:</p>
+<pre><code>    A = np.diag(S) @ VT
+</code></pre>
+<p>These show how each mode evolves with time Expected for vortex shedding:</p>
+<pre><code>     - sine wave behavior
+     - mode pairing
+     - periodic oscillation
+</code></pre>
+<p>Observed:
+         - dominant steady mode
+         - weak higher modes</p>
+<p>This showed that strong periodic shedding was weak for the selected computational setup.</p>
+<hr />
+<h2 id="step-13-frequency-analysis">Step 13 — Frequency Analysis</h2>
+<p>FFT was added using:</p>
+<pre><code>    fft_vals = np.abs(fft(signal))
+</code></pre>
+<p>to estimate:
+         - dominant frequency
+         - Strouhal number</p>
+<p>Although the final setup remained steady-dominant, the frequency extraction pipeline was successfully established for future higher-Re studies.</p>
+<hr />
+<h2 id="final-logic-summary">Final Logic Summary</h2>
+<p>The project logic is:</p>
+<pre><code>        Good CFD → Good Snapshots → Good POD → Meaningful ROM
+</code></pre>
+<p>not</p>
+<pre><code>            Bad CFD → Magic Python → Good ROM
+</code></pre>
+<p>This is the most important lesson. ROM quality always depends on CFD quality. POD does not create physics. It only compresses the physics already present in the simulation. This project successfully established the full logic from Running CFD to Understanding and Compressing CFD Physics</p>
 
 
 
