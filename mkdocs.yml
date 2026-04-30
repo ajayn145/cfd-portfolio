@@ -60,7 +60,25 @@ nav:
       - ROM Implementation: project-5-ROM_flow_around_a_cylinder/ROM-implementation.md
       - Simualtion Logic: project-5-ROM_flow_around_a_cylinder/simulation-logic.md
       
+theme:
+  name: material
+  palette:
 
+    # Light Mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Dark Mode
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 markdown_extensions:
   - pymdownx.superfences
