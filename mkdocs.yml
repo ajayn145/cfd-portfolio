@@ -3,9 +3,9 @@ site_name: CFD Portfolio - Ajay
 theme:
   name: material
   
-    font:
-    text: Poppins
-    code: Roboto Mono
+  font:
+  text: Poppins
+  code: Roboto Mono
 
 nav:
   - Home: index.md
